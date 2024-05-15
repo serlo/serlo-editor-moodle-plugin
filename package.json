@@ -1,0 +1,22 @@
+{
+    "name": "moodle-mod_serlo",
+    "version": "1.0.0",
+    "description": "Moodle activity module that provides serlo features.",
+    "keywords": [
+        "Serlo",
+        "Moodle"
+    ],
+    "author": "Faisla Kaleem <faisal@wizcoders.com>",
+    "license": "GNU GPL v3",
+    "publish": false,
+    "devDependencies": {
+        "grunt": "^1.6.1",
+        "grunt-contrib-clean": "^2.0.1",
+        "grunt-contrib-sass": "^2.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-load-gruntfile": "^0.0.2"
+    },
+    "dependencies": {
+        "@serlo/editor-web-component": "^0.0.4"
+    }
+}

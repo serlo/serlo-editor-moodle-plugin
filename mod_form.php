@@ -41,8 +41,7 @@ class mod_serlo_mod_form extends moodleform_mod {
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
 
-        $mform->addElement('text', 'state', get_string('name'));
-        $mform->setType('state', PARAM_TEXT);
+        // TODO: add dropdown to select from a list of template states. This can later be prefilled by query params set by the activity picker
 
         $this->standard_intro_elements(get_string('intro', 'serlo'));
 

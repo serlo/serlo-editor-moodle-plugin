@@ -51,7 +51,6 @@ $modes = array(
 
 // Print the page header.
 echo $OUTPUT->header();
-echo $OUTPUT->heading(format_string($serlo->name), 2);
 
 if ($serlo->intro) {
   echo $OUTPUT->box(format_module_intro('serlo', $serlo, $cm->id), 'generalbox', 'intro');

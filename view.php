@@ -59,13 +59,13 @@ if(has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing(
 }
 
 echo '<div id="serlo-root">
-    <serlo-editor></serlo-editor>
+    <serlo-editor mode="write"></serlo-editor>
   </div>';
 
 /* @var $PAGE moodle_page */
-//$PAGE->requires->js_call_amd('mod_serlo/serlo', 'init', ['serlo-root']);
+$PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init');
 //$PAGE->requires->js(new moodle_url($CFG->wwwroot . '/mod/serlo/amd/build/serlo.min.js'), true);
-echo '<script type="module" src="'.$CFG->wwwroot . '/mod/serlo/amd/build/serlo.min.js"></script>';
+// echo '<script type="module" src="'.$CFG->wwwroot . '/mod/serlo/amd/build/serlo.min.js"></script>';
 
 echo $OUTPUT->box_end();
 echo $OUTPUT->footer();

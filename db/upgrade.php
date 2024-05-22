@@ -25,5 +25,21 @@
 defined('MOODLE_INTERNAL') || die();
 
 function xmldb_serlo_upgrade($oldversion) {
+    global $DB;
+    $dbman = $DB->get_manager();
+    if ($oldversion < 2024052000) {
+
+        // Define field id to be added to serlo.
+        $table = new xmldb_table('serlo');
+        $field = new xmldb_field('state', XMLDB_TYPE_TEXT, null, null, null, null, null, null);
+
+        // Conditionally launch add field id.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Serlo savepoint reached.
+        upgrade_mod_savepoint(true, 2024052000, 'serlo');
+    }
     return true;
 }

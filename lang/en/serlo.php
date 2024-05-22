@@ -28,6 +28,7 @@ $string['modulename'] = 'Serlo';
 $string['modulename_help'] = 'The serlo activity module enables participants to ...';
 $string['modulename_link'] = 'mod/serlo/view.php';
 $string['modulenameplural'] = 'Serlos';
+$string['serlosaved'] = 'Serlo State gespeichert';
 
 $string['intro'] = 'Introduction';
 

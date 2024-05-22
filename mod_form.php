@@ -41,6 +41,9 @@ class mod_serlo_mod_form extends moodleform_mod {
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
 
+        $mform->addElement('text', 'state', get_string('name'));
+        $mform->setType('state', PARAM_TEXT);
+
         $this->standard_intro_elements(get_string('intro', 'serlo'));
 
         $this->standard_coursemodule_elements();

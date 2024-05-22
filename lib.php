@@ -95,3 +95,19 @@ function serlo_cron() {
     global $CFG, $DB;
     mtrace("This is serlo activity module and doesn't have any logic implemented");
 }
+
+
+/**
+ * Save the state for the given serlo instance
+ *
+ * @param  stdClass $serlo   a serlo object
+ * @param  array $formdata the state to be saved
+ * @param  stdClass $course   a course object (required for trigger the submitted event)
+ * @param  stdClass $context  a context object (required for trigger the submitted event)
+ */
+function serlo_save_state($serlo, $formdata, $course, $context) {
+    global $DB;
+    $serlo->state = $formdata->state;
+    $DB->update_record("serlo", $serlo);
+    // $DB->execute("UPDATE {serlo} SET state = ? WHERE id = ?", array($formdata->state, $formdata->id));
+}

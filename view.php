@@ -44,6 +44,11 @@ $PAGE->set_url('/mod/serlo/view.php', array('id' => $cm->id));
 $PAGE->set_title($title);
 $PAGE->set_heading($course->fullname);
 
+$modes = array(
+  true => "write",
+  false => "read"
+);
+
 // Print the page header.
 echo $OUTPUT->header();
 echo $OUTPUT->heading(format_string($serlo->name), 2);
@@ -55,17 +60,22 @@ if ($serlo->intro) {
 echo $OUTPUT->box_start('generalbox', 'notallowenter');
 /* @var moodle_page $PAGE */
 if(has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
-    echo '<a href="javascript:;" class="btn btn-primary">Save</a>';
+  echo '<form method="post" action="save.php" id="submitform">';
+  echo '<div>';
+  echo '<input type="hidden" name="id" value="'.$id.'" />';
+  echo '<input type="hidden" name="sesskey" value="'.sesskey().'" />';
+  echo '<input type="hidden" name="state" value="" />';
+  echo '<br />';
+  echo '<input type="submit" class="btn btn-primary" value="'. get_string("submit"). '" />';
+  echo '</div>';
+  echo '</form>';
 }
 
 echo '<div id="serlo-root">
-    <serlo-editor mode="write"></serlo-editor>
+    <serlo-editor mode="' . $modes[$PAGE->user_is_editing()] . '"></serlo-editor>
   </div>';
 
-/* @var $PAGE moodle_page */
-$PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init');
-//$PAGE->requires->js(new moodle_url($CFG->wwwroot . '/mod/serlo/amd/build/serlo.min.js'), true);
-// echo '<script type="module" src="'.$CFG->wwwroot . '/mod/serlo/amd/build/serlo.min.js"></script>';
+$PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init', array($serlo->state));
 
 echo $OUTPUT->box_end();
 echo $OUTPUT->footer();

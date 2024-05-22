@@ -101936,8 +101936,18 @@ l0,-` + (r + 144) + `c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 init_editor_web_component_DVWrqLgt();
 
 // js/serlo.js
-var init = () => {
+var init = (initialState) => {
   customElements.define("serlo-editor", Eue);
+  requestAnimationFrame(() => {
+    const editor = document.querySelector("serlo-editor");
+    const input = document.querySelector("input[type=hidden][name=state]");
+    console.log(initialState);
+    editor.initialState = JSON.parse(initialState);
+    editor.addEventListener(
+      "state-changed",
+      (stateEvent) => input.value = JSON.stringify(stateEvent.detail.newState)
+    );
+  });
 };
 export {
   init

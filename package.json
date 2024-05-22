@@ -9,6 +9,7 @@
   "author": "Faisla Kaleem <faisal@wizcoders.com>",
   "scripts": {
     "build:bundle": "esbuild --bundle --format=esm --outfile=amd/src/serlo-lazy.js js/serlo.js",
+    "watch": "esbuild --bundle --format=esm --watch --outfile=amd/src/serlo-lazy.js js/serlo.js",
     "build:moodle": "cd ../..; npx grunt rollup",
     "build": "npm run build:bundle && npm run build:moodle"
   },

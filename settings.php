@@ -24,21 +24,16 @@
  */
 defined('MOODLE_INTERNAL') || die();
 
-$settings_modserlo = new admin_settingpage('modserlosettingspage', new lang_string('settings'));
-
 if ($ADMIN->fulltree) {
-    $settings_modserlo->add(new admin_setting_configselect('mod_serlo_option', 'Option', 'Select one from the options', 'opt1',
-        array("opt1" => "Option 1", "opt2" => 'Options 2', "opt3" => 'Options 3')));
+    $settings->add(new admin_setting_heading('modserloplaceholder', get_string('settings_placeholder', 'mod_serlo'), ''));
 }
 
-$ADMIN->add('modsettings', new admin_category('modsettingsserlocat', 
-            get_string('pluginname', 'mod_serlo'), $module->is_enabled() === false));
+// $ADMIN->add('modsettings', new admin_category('modsettingsserlocat', 
+//             get_string('pluginname', 'mod_serlo'), $module->is_enabled() === false));
     
-$ADMIN->add('modsettingsserlocat', $settings_modserlo);
+// $ADMIN->add('modsettingsserlocat', $settings_modserlo);
 
 //$external_page = new admin_externalpage('modserloexternal', 'External page',
 //        new moodle_url('/mod/serlo/external.php'),
 //        'moodle/site:config');
 //$ADMIN->add('modsettingsserlocat', $external_page);
-
-$settings = null; // We do not want standard settings link.

@@ -23,16 +23,16 @@
  */
 
 $string['pluginname'] = 'Serlo';
-$string['pluginadministration'] = 'Serlo administration';
+$string['pluginadministration'] = 'Serlo Administration';
 $string['modulename'] = 'Serlo';
 $string['modulename_help'] = 'The serlo activity module enables participants to ...';
 $string['modulename_link'] = 'mod/serlo/view.php';
 $string['modulenameplural'] = 'Serlos';
-$string['serlosaved'] = 'Serlo State saved!';
-$string['serlosaveerror'] = 'Error during save of Serlo state: ';
+$string['serlosaved'] = 'Serlo State gespeichert!';
+$string['serlosaveerror'] = 'Fehler beim Speichern des Serlo States: ';
 
-$string['settings_placeholder'] = 'Serlo Settings Placeholder';
+$string['settings_placeholder'] = 'Platzhalter für Serlo Einstellungen';
 
-$string['intro'] = 'Introduction';
+$string['intro'] = 'Einleitung';
 
-$string['crontask'] = 'Serlo schedule task';
+$string['crontask'] = 'Serlo Cron Task';

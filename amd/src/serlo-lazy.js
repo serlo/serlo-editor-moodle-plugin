@@ -101758,6 +101758,7 @@ init_editor_web_component_BXJNTwg7();
 import { call } from "core/ajax";
 import { addNotification } from "core/notification";
 import { addIconToContainerWithPromise } from "core/loadingicon";
+import { get_string } from "core/str";
 var saveEditorState = async (serloid, state) => {
   const [result] = await Promise.allSettled(
     call([
@@ -101768,15 +101769,14 @@ var saveEditorState = async (serloid, state) => {
     ])
   );
   if (result.status === "rejected") {
+    const message = await get_string("serlosaveerror", "mod_serlo");
     addNotification({
-      message: `Error while saving state: ${result.reason.message}`,
+      message: `${message}: ${result.reason.message}`,
       type: "error"
     });
   } else {
-    addNotification({
-      message: "State saved!",
-      type: "info"
-    });
+    const message = await get_string("serlosaved", "mod_serlo");
+    addNotification({ message, type: "info" });
   }
 };
 var init = async (serloid) => {

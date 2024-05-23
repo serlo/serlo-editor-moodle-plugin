@@ -57,24 +57,17 @@ if ($serlo->intro) {
 }
 
 echo $OUTPUT->box_start('generalbox', 'notallowenter');
-/* @var moodle_page $PAGE */
+
 if(has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
-  echo '<form method="post" action="save.php" id="submitform">';
-  echo '<div>';
-  echo '<input type="hidden" name="id" value="'.$id.'" />';
-  echo '<input type="hidden" name="sesskey" value="'.sesskey().'" />';
-  echo '<input type="hidden" name="state" value="" />';
-  echo '<br />';
-  echo '<input type="submit" class="btn btn-primary" value="'. get_string("submit"). '" />';
-  echo '</div>';
-  echo '</form>';
+  echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled">'. get_string("submit"). '</a>';
 }
 
 echo '<div id="serlo-root">
-    <serlo-editor mode="' . $modes[$PAGE->user_is_editing()] . '"></serlo-editor>
+    <div></div>
+    <serlo-editor class="hidden" mode="' . $modes[$PAGE->user_is_editing()] . '"></serlo-editor>
   </div>';
 
-$PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init', array($serlo->state));
+$PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init', array($serlo->id));
 
 echo $OUTPUT->box_end();
 echo $OUTPUT->footer();

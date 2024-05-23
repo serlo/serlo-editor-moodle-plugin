@@ -30,11 +30,11 @@ export const init = async (serloid) => {
 
   const editor = document.querySelector("serlo-editor");
   const saveButton = document.getElementById("mod_serlo_save");
-  saveButton.addEventListener("click", () =>
+  saveButton?.addEventListener("click", () =>
     saveEditorState(serloid, editor.currentState),
   );
   editor.addEventListener("state-changed", () =>
-    saveButton.classList.remove("disabled"),
+    saveButton?.classList.remove("disabled"),
   );
 
   const loaderContainer = document.querySelector("#serlo-root > div");
@@ -47,7 +47,7 @@ export const init = async (serloid) => {
       },
     ]),
   );
-  editor.initialState = JSON.parse(initialState);
+  if (initialState) editor.initialState = JSON.parse(initialState);
   editor.classList.remove("hidden");
   loader.resolve();
 };

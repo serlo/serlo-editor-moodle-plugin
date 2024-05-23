@@ -36,3 +36,19 @@ $string['settings_placeholder'] = 'Serlo Settings Placeholder';
 $string['intro'] = 'Introduction';
 
 $string['crontask'] = 'Serlo schedule task';
+
+$string['articleIntroduction'] = 'Explanation with multimadia-content';
+$string['text'] = 'Text';
+$string['image'] = 'Image';
+$string['spoiler'] = 'Spolier';
+$string['box'] = 'Box';
+$string['serloTable'] = 'Table';
+$string['injection'] = 'serlo.org Content';
+$string['equations'] = 'Equations';
+$string['geogebra'] = 'GeoGebra Applet';
+$string['highlight'] = 'Code';
+$string['video'] = 'Video';
+$string['scMcExercise'] = 'Choice excercise';
+$string['inputExercise'] = 'Input excercise';
+$string['h5p'] = 'H5P excercise';
+$string['blanksExercise'] = 'Blanks excercise';

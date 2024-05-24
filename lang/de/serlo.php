@@ -37,6 +37,8 @@ $string['intro'] = 'Einleitung';
 
 $string['crontask'] = 'Serlo Cron Task';
 
+$string['initialstate'] = 'Initialer Inhalt';
+
 $string['articleIntroduction'] = 'Erklärung mit Multimedia-Inhalt';
 $string['text'] = 'Text';
 $string['image'] = 'Bild';

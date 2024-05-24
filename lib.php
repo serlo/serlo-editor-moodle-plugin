@@ -37,6 +37,12 @@ defined('MOODLE_INTERNAL') || die();
 function serlo_add_instance($serlo) {
   global $DB;
   $serlo->timemodified = time();
+
+  $types = serlo_get_content_types();
+  $type = $serlo->type ?? array_key_first($types);
+  unset($serlo->type);
+  $serlo->state = $types[$type]['initalContent'];
+
   $returnid = $DB->insert_record("serlo", $serlo);
 
   return $returnid;
@@ -111,34 +117,16 @@ function serlo_get_course_content_items(
 ) {
   global $OUTPUT;
 
-  $types = [
-    'articleIntroduction' => array('image' => 'multimedia-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'text' => array('image' => 'text-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'image' => array('image' => 'image-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'spoiler' => array('image' => 'spoiler-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'box' => array('image' => 'box-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'serloTable' => array('image' => 'Table-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'injection' => array('image' => 'injection-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'equations' => array('image' => 'equation-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'geogebra' => array('image' => 'geogebra-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'highlight' => array('image' => 'code-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'video' => array('image' => 'video-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'scMcExercise' => array('image' => 'auswahlaufgaben-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'inputExercise' => array('image' => 'fallback-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'h5p' => array('image' => 'fallback-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-    'blanksExercise' => array('image' => 'auswahlaufgaben-icon', 'help' => $defaultmodulecontentitem->get_help() . ''),
-  ];
-
   $items = [];
 
-  foreach ($types as $key => $value) {
+  foreach (serlo_get_content_types() as $key => $value) {
     $items[] = new \core_course\local\entity\content_item(
       $defaultmodulecontentitem->get_id() + 1,
       $key,
-      new \core_course\local\entity\string_title('Serlo ' . get_string($key, 'mod_serlo')),
+      new \core_course\local\entity\string_title('Serlo ' . $value['title']),
       new moodle_url('/course/modedit.php', array("course" => $course->id, "add" => "serlo", "return" => 0, "type" => $key)),
       $OUTPUT->pix_icon($value['image'], '', 'serlo', ['class' => "activityicon nofilter"]),
-      $value['help'],
+      $defaultmodulecontentitem->get_help(), // . get_string($key . '_help'),
       $defaultmodulecontentitem->get_archetype(),
       $defaultmodulecontentitem->get_component_name(),
       $defaultmodulecontentitem->get_purpose(),
@@ -146,19 +134,84 @@ function serlo_get_course_content_items(
     );
   }
   return $items;
-  // array(
-  //   $defaultmodulecontentitem,
-  //   new \core_course\local\entity\content_item(
-  //     42,
-  //     "Test Item",
-  //     new \core_course\local\entity\string_title("Test Item Title"),
-  //     new moodle_url('/course/modedit.php', array("course" => $course->id, "add" => "serlo", "return" => 0, "typeid" => 42)),
-  //     $OUTPUT->pix_icon('audio-icon', '', 'serlo', ['class' => "activityicon nofilter"]),
-  //     $defaultmodulecontentitem->get_help(),
-  //     $defaultmodulecontentitem->get_archetype(),
-  //     $defaultmodulecontentitem->get_component_name(),
-  //     $defaultmodulecontentitem->get_purpose(),
-  //     $defaultmodulecontentitem->is_branded()
-  //   ),
-  // );
+}
+
+function serlo_get_content_types() {
+  return [
+    'text' => array(
+      'image' => 'text-icon',
+      'title' => get_string('text', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
+    ),
+    'articleIntroduction' => array(
+      'image' => 'multimedia-icon',
+      'title' => get_string('articleIntroduction', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"articleIntroduction","state":{"explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"multimedia":{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}},"illustrating":true,"width":50}}]}',
+    ),
+    'image' => array(
+      'image' => 'image-icon',
+      'title' => get_string('image', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}}]}',
+    ),
+    'spoiler' => array(
+      'image' => 'spoiler-icon',
+      'title' => get_string('spoiler', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"spoiler","state":{"richTitle":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}}}]}',
+    ),
+    'box' => array(
+      'image' => 'box-icon',
+      'title' => get_string('box', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"box","state":{"type":"example","title":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"anchorId":"","content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}}}]}',
+    ),
+    'serloTable' => array(
+      'image' => 'Table-icon',
+      'title' => get_string('serloTable', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"serloTable","state":{"rows":[{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}],"tableType":"OnlyColumnHeader"}}]}',
+    ),
+    'injection' => array(
+      'image' => 'injection-icon',
+      'title' => get_string('injection', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"injection","state":""}]}',
+    ),
+    'equations' => array(
+      'image' => 'equation-icon',
+      'title' => get_string('equations', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"equations","state":{"steps":[{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}],"firstExplanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"transformationTarget":"equation"}}]}',
+    ),
+    'geogebra' => array(
+      'image' => 'geogebra-icon',
+      'title' => get_string('geogebra', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"geogebra","state":""}]}',
+    ),
+    'highlight' => array(
+      'image' => 'code-icon',
+      'title' => get_string('highlight', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"highlight","state":{"code":"","language":"text","showLineNumbers":false}}]}',
+    ),
+    'video' => array(
+      'image' => 'video-icon',
+      'title' => get_string('video', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"video","state":{"src":"","alt":""}}]}',
+    ),
+    'scMcExercise' => array(
+      'image' => 'auswahlaufgaben-icon',
+      'title' => get_string('scMcExercise', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"scMcExercise","state":{"isSingleChoice":false,"answers":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"isCorrect":false,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"isCorrect":false,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
+    ),
+    'inputExercise' => array(
+      'image' => 'fallback-icon',
+      'title' => get_string('inputExercise', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"inputExercise","state":{"type":"input-number-exact-match-challenge","unit":"","answers":[{"value":"","isCorrect":true,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
+    ),
+    'h5p' => array(
+      'image' => 'fallback-icon',
+      'title' => get_string('h5p', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"h5p","state":""}}}]}',
+    ),
+    'blanksExercise' => array(
+      'image' => 'auswahlaufgaben-icon',
+      'title' => get_string('blanksExercise', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"blanksExercise","state":{"text":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
+    ),
+  ];
 }

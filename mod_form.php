@@ -15,38 +15,77 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 if (!defined('MOODLE_INTERNAL')) {
-    die('Direct access to this script is forbidden.');    //  It must be included from a Moodle page.
+  die('Direct access to this script is forbidden.'); //  It must be included from a Moodle page.
 }
 
-require_once($CFG->dirroot.'/course/moodleform_mod.php');
+require_once $CFG->dirroot . '/course/moodleform_mod.php';
 
 class mod_serlo_mod_form extends moodleform_mod {
 
-    /**
-     * Define the serlo activity settings form
-     */
-    public function definition() {
-        global $CFG;
+  /** @var string|null type */
+  protected ?string $type;
 
-        $mform = $this->_form;
+  /**
+   * Constructor.
+   *
+   * @param \stdClass $current the current form data.
+   * @param string $section the section number.
+   * @param \stdClass $cm the course module object.
+   * @param \stdClass $course the course object.
+   */
+  public function __construct($current, $section, $cm, $course) {
 
-        $mform->addElement('header', 'general', get_string('general', 'form'));
+    // Setup some of the pieces used to control display in the form definition() method.
+    // Type parameter being passed when adding an preconfigured tool from activity chooser.
+    $this->type = optional_param('type', null, PARAM_ALPHA);
 
-        $mform->addElement('text', 'name', get_string('name'), array('size' => '64'));
-        if (!empty($CFG->formatstringstriptags)) {
-            $mform->setType('name', PARAM_TEXT);
-        } else {
-            $mform->setType('name', PARAM_CLEANHTML);
-        }
-        $mform->addRule('name', null, 'required', null, 'client');
-        $mform->addRule('name', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+    parent::__construct($current, $section, $cm, $course);
+  }
 
-        // TODO: add dropdown to select from a list of template states. This can later be prefilled by query params set by the activity picker
+  /**
+   * Define the serlo activity settings form
+   */
+  public function definition() {
+    global $CFG;
 
-        $this->standard_intro_elements(get_string('intro', 'serlo'));
+    $mform = $this->_form;
 
-        $this->standard_coursemodule_elements();
+    $mform->addElement('header', 'general', get_string('general', 'form'));
 
-        $this->add_action_buttons();
+    $mform->addElement('text', 'name', get_string('name'), array('size' => '64', 'style' => 'flex: 1;'));
+    if (!empty($CFG->formatstringstriptags)) {
+      $mform->setType('name', PARAM_TEXT);
+    } else {
+      $mform->setType('name', PARAM_CLEANHTML);
     }
+    $mform->addRule('name', null, 'required', null, 'client');
+    $mform->addRule('name', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+
+    // Only display the initial content picker if we are creating a new instance
+    if (empty($this->current->id)) {
+      $selectionItems = [];
+
+      foreach (serlo_get_content_types() as $key => $value) {
+        $selectionItems[$key] = $value['title'];
+      }
+
+      // TODO: add dropdown to select from a list of template states. This can later be prefilled by query params set by the activity picker
+      $mform->addElement(
+        'select',
+        'type',
+        get_string('initialstate', 'mod_serlo'),
+        $selectionItems,
+        array(
+          'data-initial-value' => $this->type ?? array_key_first($selectionItems),
+          'style' => 'flex: 1;',
+        )
+      );
+    }
+
+    $this->standard_intro_elements(get_string('intro', 'serlo'));
+
+    $this->standard_coursemodule_elements();
+
+    $this->add_action_buttons();
+  }
 }

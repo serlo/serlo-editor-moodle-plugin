@@ -24,6 +24,6 @@
     "grunt-load-gruntfile": "^0.0.2"
   },
   "dependencies": {
-    "@serlo/editor-web-component": "0.0.8"
+    "@serlo/editor-web-component": "0.0.9"
   }
 }

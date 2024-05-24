@@ -8,9 +8,9 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// node_modules/@serlo/editor-web-component/dist/index-BglCwUPx-CCfy-iqL.js
-var index_BglCwUPx_CCfy_iqL_exports = {};
-__export(index_BglCwUPx_CCfy_iqL_exports, {
+// node_modules/@serlo/editor-web-component/dist/index-BglCwUPx-sXv6YRij.js
+var index_BglCwUPx_sXv6YRij_exports = {};
+__export(index_BglCwUPx_sXv6YRij_exports, {
   AccessorNode: () => Ca,
   AccessorNodeDependencies: () => ci,
   ArgumentsError: () => tn,
@@ -5292,9 +5292,9 @@ function W9(e10, t19) {
   }), r.create = W9.bind(null, e10), r.factory = I, r.import(Pm(hb(e10))), r.ArgumentsError = tn, r.DimensionError = $e, r.IndexError = xr, r;
 }
 var ss, st, fo, mo, he, Gm, Mn, dn, Db, bb, wb, Nb, Eb, Mb, Fb, Tb, Bb, Ob, _b, qb, Qm, Jb, Xb, ls, $v, Qv, Kb, zo, tw, rw, Ro, ea, yn, yo, Gi, Vi, vo, Zv, Jr, Ue, ps, hn, Jv, Xv, Yv, Lt, Ct, nw, aw, iw, Kv, Mr, _e, sw, ow, xo, ye, yt, gn, Jw, Xw, Uo, s1, Yw, qt, Kw, eN, Po, o1, tN, Qr, rN, nN, jo, aN, iN, Lo, sN, oN, Go, cN, lN, Vo, rh, pN, $o, ah, dN, Ho, Tr, ha, mN, ga, hN, gN, yN, vN, xN, Wo, R1, na, k1, DN, bN, sh, Gt, hs, oh, wN, Qo, uh, NN, Zo, ch, EN, Jo, lh, SN, Xo, ph, AN, Yo, dh, CN, Ko, fh, MN, eu, ya, Zi, TN, tu, BN, ON, ru, _N, qN, nu, mh, RN, au, hh, kN, iu, UN, PN, su, jN, LN, ou, GN, VN, uu, gh, $N, cu, yh, HN, lu, vh, WN, pu, xh, QN, du, Dh, ZN, fu, bh, JN, mu, wh, XN, hu, Nh, YN, gu, Eh, KN, ti, Sh, t2, yu, Ah, r2, vu, Ch, n2, xu, a2, i2, kt, s2, o2, Tt, u2, c2, Br, No, l2, p2, Du, Mh, d2, bu, Fh, f2, wu, Th, m2, Nu, Eo, h2, g2, Eu, So, y2, v2, gs, x2, D2, Or, b2, w2, Yt, N2, E2, ys, S2, A2, C2, M2, F2, T2, B2, O2, ht, Bh, _2, vs, q2, I2, vn, z2, R2, Su, k2, U2, qn, Oh, P2, so, j2, Au, L2, G2, xs, qh, V2, Cu, Ih, $2, Mu, zh, H2, Fu, W2, Q2, Tu, Rh, Z2, Bu, kh, J2, Ou, Uh, X2, _u, Y2, K2, qu, Ph, eE, Iu, jh, tE, zu, Lh, rE, Ru, Gh, nE, ku, aE, iE, ix, Vh, sE, Uu, $h, dE, Ds, Hh, fE, ju, Wh, mE, bs, hE, gE, Pr, Qh, yE, Lu, Zh, vE, Gu, Jh, xE, Vu, Xh, DE, $u, Yh, bE, Hu, Kh, wE, Wu, e0, NE, ws, t0, EE, Qu, r0, SE, Ns, n0, AE, Es, a0, CE, Zu, i0, ME, Ju, s0, FE, Xu, TE, BE, Yu, u0, OE, Ku, c0, _E, ec, l0, IE, tc, p0, zE, rc, d0, RE, nc, f0, kE, ac, m0, PE, Ss, jE, LE, ic, h0, GE, As, g0, VE, oc, $E, HE, uc, y0, WE, cc, v0, QE, lc, x0, ZE, Cs, D0, JE, pc, b0, XE, dc, w0, YE, Ms, E0, rS, fc, S0, nS, mc, A0, aS, hc, C0, iS, gc, M0, sS, yc, lS, pS, vc, dS, fS, xc, mS, hS, Zr, Jn, gS, T0, yS, Dc, B0, vS, bc, O0, xS, wc, _0, DS, Nc, q0, bS, Ec, I0, wS, Sc, z0, NS, Ac, ux, R0, ES, Fs, U0, SS, Cc, P0, AS, Mc, CS, MS, Fc, j0, FS, Tc, L0, TS, Bc, Xn, G0, BS, Oc, V0, OS, _c, $0, _S, qc, H0, qS, Ic, W0, IS, zc, Q0, zS, Rc, Z0, RS, kc, J0, kS, Uc, X0, US, Pc, Y0, PS, jc, jS, LS, Lc, Gc, K0, GS, Vc, eg, VS, $c, tg, $S, Hc, rg, HS, Ts, Xi, WS, Wc, QS, ZS, Yn, ng, JS, Qc, ag, YS, Zc, Yi, KS, Jc, eA, ig, tA, Xc, Ki, rA, Yc, nA, es, aA, Kc, iA, ts, sA, el, oA, rs, uA, tl, cA, sg, lA, rl, ns, pA, nl, dA, og, fA, al, ug, mA, il, cg, hA, Bs, lg, gA, Os, yA, vA, sl, xA, DA, ol, bA, wA, ul, NA, EA, cl, SA, AA, ll, CA, MA, FA, pl, fg, TA, dl, mg, BA, fl, hg, OA, ml, gg, _A, hl, yg, qA, gl, vg, IA, yl, xg, zA, vl, Dg, RA, xl, bg, kA, Dl, wg, UA, bl, Ng, PA, wl, Eg, jA, Nl, LA, GA, El, VA, $A, Sl, Sg, HA, Al, Ag, WA, Cl, xa, Cg, QA, Ml, Mg, ZA, Fl, Fg, JA, Tl, Tg, XA, Bl, Bg, YA, Ol, Og, KA, _l, _g, eC, ql, qg, tC, Il, Ig, rC, zl, zg, nC, Rl, Rg, aC, kl, iC, sC, Ul, kg, oC, Pl, Ug, uC, jl, Pg, cC, Ll, jg, lC, Gl, Lg, pC, Vl, Gg, dC, $l, Vg, fC, Hl, $g, mC, Wl, Hg, hC, Ql, Wg, gC, Zl, Qg, yC, Jl, Zg, vC, Xl, Jg, xC, Yl, Xg, DC, Kl, bC, wC, ep, Yg, NC, tp, cx, EC, SC, rp, Di, AC, np, bi, CC, ap, Sr, Ni, TC, ip, Ei, BC, sp, Si, OC, op, Ao, _C, qC, IC, zC, RC, Co, nt, Kg, kC, ey, Ai, UC, up, Ci, PC, cp, Mi, jC, lp, Fi, LC, pp, Ti, GC, dp, Bi, VC, fp, Oi, $C, mp, _i, HC, hp, WC, QC, gp, qi, ZC, yp, ty, JC, vp, ry, XC, xp, ny, YC, Dp, KC, e3, bp, ay, t3, wp, iy, r3, Np, sy, n3, Ep, u3, c3, l3, d3, f3, m3, h3, g3, y3, D3, b3, w3, N3, E3, S3, uy, A3, Sp, ly, C3, Ap, py, M3, Cp, F3, T3, Mp, B3, O3, Fp, dy, _3, q3, I3, z3, R3, k3, U3, P3, j3, L3, fy, G3, V3, $3, H3, W3, Q3, Z3, J3, X3, Y3, K3, eM, tM, rM, nM, aM, iM, sM, oM, uM, cM, lM, pM, dM, fM, mM, hM, gM, yM, vM, xM, DM, bM, wM, NM, EM, SM, AM, CM, MM, FM, TM, BM, OM, _M, qM, IM, zM, RM, kM, UM, PM, jM, LM, GM, VM, $M, HM, WM, QM, ZM, JM, XM, YM, KM, eF, tF, rF, nF, aF, iF, sF, oF, uF, cF, lF, pF, dF, fF, mF, hF, gF, yF, vF, xF, DF, bF, wF, NF, EF, SF, AF, CF, MF, FF, TF, BF, OF, _F, qF, IF, zF, RF, kF, UF, PF, jF, LF, GF, VF, $F, HF, WF, QF, ZF, JF, XF, YF, KF, eT, tT, rT, nT, aT, iT, sT, oT, uT, cT, lT, pT, dT, fT, mT, hT, gT, yT, vT, xT, DT, bT, wT, NT, ET, ST, AT, CT, MT, FT, TT, BT, OT, _T, qT, IT, zT, RT, kT, UT, PT, jT, LT, GT, VT, $T, HT, WT, QT, ZT, JT, XT, YT, KT, e4, t4, r4, n4, a4, i4, s4, o4, u4, c4, l4, p4, d4, f4, m4, h4, g4, y4, v4, x4, D4, b4, w4, N4, E4, S4, A4, C4, M4, F4, T4, B4, O4, _4, q4, I4, z4, R4, k4, U4, P4, j4, L4, G4, V4, $4, H4, W4, Q4, Z4, J4, X4, Y4, K4, eB, tB, rB, nB, aB, my, iB, Tp, hy, sB, Bp, gy, oB, Op, yy, uB, _p, vy, cB, qp, dB, fB, Ip, xy, mB, zp, Dy, hB, Rp, by, gB, kp, wy, yB, Up, Ny, vB, Pp, xB, DB, jp, Ey, bB, Lp, wB, NB, Gp, Sy, EB, qs, Ii, SB, Is, Ay, AB, zs, Cy, CB, Vp, My, MB, $p, co, Fy, FB, Rs, Ty, TB, ks, By, BB, Us, Oy, OB, Hp, _y, _B, Wp, Iy, qB, Qp, Ry, IB, Zp, ky, zB, Jp, Uy, RB, Xp, Py, kB, Yp, jy, UB, Kp, Ly, PB, ed, mx, jB, hx, LB, gx, GB, yx, VB, vx, $B, xx, HB, Dx, WB, QB, ZB, JB, XB, YB, KB, In, e5, bx, t5, Vy, r5, td, $y, n5, nd, Hy, a5, ad, Wy, i5, id, Qy, s5, sd, Zy, o5, od, Jy, u5, ud, Xy, c5, cd, l5, p5, ld, d5, f5, pd, m5, h5, dd, ev, g5, fd, y5, v5, md, tv, x5, hd, rv, D5, gd, nv, b5, yd, av, w5, vd, iv, N5, xd, E5, S5, Dd, A5, C5, bd, M5, wd, Nd, Ed, Sd, Ad, Cd, Md, Fd, Td, Bd, Od, _d, qd, Id, zd, Rd, wx, Nx, kd, Ud, Pd, jd, Ld, Gd, Vd, $d, Hd, Wd, Qd, Zd, Jd, Xd, Yd, Kd, ef, tf, rf, nf, af, sf, of, uf, cf, lf, pf, df, ff, mf, hf, gf, yf, vf, xf, Df, bf, wf, Nf, Ef, Sf, Af, Cf, Mf, Ff, Tf, Bf, Of, _f, qf, If, F5, T5, zf, B5, O5, Rf, _5, q5, Uf, I5, z5, Pf, R5, k5, jf, U5, P5, Lf, j5, L5, Gf, G5, V5, Vf, $5, H5, $f, W5, Q5, Hf, Z5, J5, Wf, X5, Y5, Qf, K5, eO, Zf, uv, tO, Jf, rO, nO, Xf, cv, aO, Yf, iO, sO, Kf, lv, oO, em, pv, uO, tm, dv, cO, rm, lO, pO, nm, dO, fO, am, mO, hO, im, gO, yO, sm, vO, Ne, mt, fv, xO, DO, zn, Ex, bO, wO, NO, js, EO, SO, AO, CO, Sx, MO, FO, Ax, TO, BO, Ge, OO, _O, To, qO, IO, L, om, zO, er, RO, kO, UO, Bt, PO, jO, LO, Cx, GO, pr, VO, $O, HO, Ls, Gs, Rn, um, WO, QO, ZO, Ze, JO, Mx, XO, YO, KO, ni, cm, e8, lm, ar, Dn, kn, _r, t8, r8, n8, Fx, Un, wt, is, rn, a8, i8, s8, o8, pm, u8, Tx, Vs, nn, c8, l8, p8, Dr, d8, Bx, f8, m8, dm, h8, g8, y8, v8, x8, ai, D8, b8, w8, N8, E8, qr, S8, jr, A8, C8, Da, Pn, ve, M8, F8, Fr, Ox, _x, Ut, T8, ii, qx, Rt, B8, Ix, rt, O8, fm, zx, vt, si, br, oi, _8, bn, q8, $s, I8, Rx, mm, z8, R8, hm, k8, U8, ba, Qt, bt, P8, j8, gm, L8, Ye, G8, V8, $8, H8, W8, jn, kx, Q8, ym, Z8, J8, Hs, X8, Ux, Y8, K8, Px, jt, Zt, vm, e6, t6, r6, jx, ut, n6, a6, Ws, i6, Lx, mr, xm, s6, Gx, o6, Dm, Lr, u6, c6, Vx, l6, $x, Hx, Wx, p6, d6, f6, m6, bm, h6, g6, y6, v6, la, x6, D6, pa, b6, Qx, w6, Zx, Jx, Xx, Ln, Yx, N6, wr, Kx, E6, S6, ze, A6, C6, M6, F6, T6, B6, O6, _6, q6, I6, z6, R6, k6, eD, wm, U6, P6, j6, L6, G6, V6, $6, H6, W6, Q6, Z6, J6, X6, Y6, K6, e_, t_, r_, n_, a_, i_, s_, o_, u_, Ot, c_, ui, l_, p_, d_, tD, f_, m_, h_, g_, y_, v_, x_, D_, rD, b_, w_, nD, N_, E_, S_, aD, A_, C_, M_, Nm, F_, iD, T_, B_, O_, __, q_, Em, sD, I_, oD, z_, uD, R_, wa, Na, cD, Vt, Ea, an, Gn, lD, Sa, pD, dD, wn, fD, k_, Sm, mD, U_, Aa, Ca, hD, Nn, En, Gr, gD, Am, P_, Cm, Mm, yD, vD, Qs, j_, L_, G_, V_, $_, H_, Ee, gt, Fm, He, Ma, G, sr, tr, Je, Sn, _t, hr, De, it, et, $t, Nr, ci, Z9, J9, X9, Y9, K9, eq, Tm, tq, rq, xD, nq, aq, li, iq, sq, oq, uq, W_, Q_, cq, lq, Er, pi, An, Vr, Dt, Ir, di, DD, Z_, J_, Zs, Fa, Et, Vn, $r, Ta, Ht, Bm, lt, zr, sn, X_, Ba, Rr, Re, pq, dq, $n2, Om, bD, Js, or, Y_, fq, mq, hq, gq, yq, vq, xq, Dq, K_, e9, bq, wq, Nq, Eq, Sq, t9, r9, Aq, Cq, Mq, ur, n9, wD, rr, Oa, _m, fi, mi, a9, Fq, Tq, _a, on, i9, s9, Hn, o9, Wn, Qn, hi, gi, Cn, qa, u9, c9, un, Bq, qm, Oq, _q, qq, Pt, l9, Hr, St, ND, Iq, ED, zq, Rq, kq, Uq, p9, Pq, jq, Lq, Gq, Vq, Xs, SD, $q, AD, Hq, Wq, CD, d9, MD, FD, Im, Qq, Zq, f9, Jq, Xq, Yq, Ys, Kq, e7, m9, t7, Ks, TD, BD, h9, OD, _D, g9, zm, qD, y9, v9, r7, n7, a7, i7, s7, ID, x9, o7, u7, c7, l7, p7, D9, b9, w9, N9, E9, d7, f7, m7, h7, g7, y7, v7, x7, D7, b7, w7, N7, E7, S9, S7, A7, C7, M7, A9, F7, T7, B7, O7, C9, M9, _7, eo, q7, zD, Ia, I7, z7, R7, k7, U7, P7, j7, L7, G7, V7, $7, H7, W7, Q7, F9, Z7, T9, B9, O9, _9, RD, q9, I9, J7, Rm, z9, X7, Y7, K7, eI, tI, rI, kD, nI, aI, iI, sI, oI, uI, cI, lI, pI, dI, fI, mI, hI, gI, yI, vI, xI, DI, bI, wI, R9, NI, EI, SI, UD, AI, CI, MI, FI, TI, BI, OI, _I, k9, qI, II, zI, RI, kI, UI, PI, jI, LI, GI, VI, $I, HI, WI, QI, ZI, JI, XI, U9, YI, KI, ez, tz, rz, nz, az, iz, sz, oz, uz, P9, cz, j9, lz, pz, dz, fz, L9, mz, hz, gz, yz, vz, xz, Dz, bz, wz, Nz, PD, Ez, Sz, Az, Cz, Mz, Fz, Tz, Bz, Oz, _z, qz, Iz, zz, Rz, kz, Uz, Pz, jz, Lz, Gz, Vz, $z, Hz, Wz, Qz, Zz, km, G9, V9;
-var init_index_BglCwUPx_CCfy_iqL = __esm({
-  "node_modules/@serlo/editor-web-component/dist/index-BglCwUPx-CCfy-iqL.js"() {
-    init_editor_web_component_BXJNTwg7();
+var init_index_BglCwUPx_sXv6YRij = __esm({
+  "node_modules/@serlo/editor-web-component/dist/index-BglCwUPx-sXv6YRij.js"() {
+    init_editor_web_component_D93UQdFo();
     ss = {
       // minimum relative difference between two compared values,
       // used by all comparison functions
@@ -37387,7 +37387,7 @@ In case of a (multi dimensional) array or matrix, the prob order quantile of all
   }
 });
 
-// node_modules/@serlo/editor-web-component/dist/editor-web-component-BXJNTwg7.js
+// node_modules/@serlo/editor-web-component/dist/editor-web-component-D93UQdFo.js
 function Rk(t19) {
   return t19 && t19.__esModule && Object.prototype.hasOwnProperty.call(t19, "default") ? t19.default : t19;
 }
@@ -47881,7 +47881,7 @@ function VD(t19) {
   }), [m]), [g, h] = I10.useState(
     /* @__PURE__ */ new Map()
   ), [T, x] = I10.useState(null);
-  I10.useEffect(() => void Promise.resolve().then(() => (init_index_BglCwUPx_CCfy_iqL(), index_BglCwUPx_CCfy_iqL_exports)).then((w) => x(w)), []);
+  I10.useEffect(() => void Promise.resolve().then(() => (init_index_BglCwUPx_sXv6YRij(), index_BglCwUPx_sXv6YRij_exports)).then((w) => x(w)), []);
   const k = I10.useMemo(() => {
     const w = /* @__PURE__ */ new Map();
     return m.forEach((E) => {
@@ -57777,7 +57777,7 @@ function kee({
   onEvaluate: n
 }) {
   const [i, o] = I10.useState(null), [a, s] = I10.useState(""), l = fr2().strings.content.exercises, [c, u] = I10.useState(null);
-  I10.useEffect(() => void Promise.resolve().then(() => (init_index_BglCwUPx_CCfy_iqL(), index_BglCwUPx_CCfy_iqL_exports)).then((m) => u(m)), []);
+  I10.useEffect(() => void Promise.resolve().then(() => (init_index_BglCwUPx_sXv6YRij(), index_BglCwUPx_sXv6YRij_exports)).then((m) => u(m)), []);
   function d() {
     if (!c)
       return;
@@ -67602,8 +67602,8 @@ function Lk(t19) {
   return t19 != null && typeof t19 == "object" && "plugin" in t19;
 }
 var qk, gm2, $k, or2, y02, J_2, K_2, eN2, tN2, rN2, nN2, iN2, oN2, aN2, sN2, dx2, Hk, Uk, Vk, qb2, px2, Gk, $b2, Xk, hx2, yi, Hp2, pN2, I10, ot, hN2, mN2, fN2, gN2, vN2, bN2, wl2, Yk, io2, Jk, Kk, yN2, e92, ro2, t92, Rd2, Ka2, R12, wN2, mx2, fx2, Xn2, Ub2, ps2, tp2, Ac2, Oc2, Gb2, q12, r92, n92, Xb2, $12, H12, Qb2, Es2, i92, gx2, nn2, Uf2, Vf2, od2, np2, u92, vd2, zN2, TN2, J12, K12, Vc2, Wc2, Gf2, ev2, Vu2, bd2, vh2, bh2, tv2, ON2, x92, Sx2, IN2, jN2, dn2, BN2, Yb2, k92, yh2, MN2, S92, vm2, ba2, Jo2, FN2, RN2, ip2, op2, vr2, D92, Kb2, z92, T92, A92, nv2, ap2, Rs2, qs2, $s2, Hd2, Ud2, As2, VN2, Gc2, xh2, kh2, Is2, t22, Vp2, Eu2, r22, x02, ZN2, Qf2, Zf2, Xu2, bm2, zx2, YN2, JN2, KN2, Yf2, eP, tP, rP, nP, iP, Tx2, oP, aP, sP, cP, uP, dP, Ax2, pP, hP, mP, fP, gP, vP, bP, i22, yd2, yP, P92, Ox2, _x2, _c2, kP, wd2, Wd2, M92, Jf2, Kf2, Px2, ta2, _P, Nc2, ov2, xd2, av2, Pc2, eg2, q92, $92, H92, U92, V92, W92, Lx2, rg2, NP, PP, tg2, sd2, IP, cp2, jP, BP, sv2, lv2, uv2, MP, $x2, LP, Du2, ga2, Zd2, es2, dv2, RP, qP, pv2, jc2, Ys2, ii2, Ii2, Gl2, Ra, km2, ag2, Bc2, Mc2, zh2, Th2, mo2, fo2, Xl2, Ua2, Va2, to, eo2, $r2, Uo2, HP, Ah2, Oh2, Lc2, c22, Pl2, Ds2, rS2, Sm2, au2, oS2, S02, ya2, Yd2, Jd2, Yr2, sg2, Xp2, lg2, Ql2, tn2, An2, Ln2, Ph2, kd2, Kd2, UP, Ih2, XP, QP, ZP, YP, JP, Ni2, xv2, IS2, Sv2, jS2, BS2, mp2, ri2, nI2, mt2, c42, Wn2, $o2, aI2, jh2, S22, Co2, cr, qn2, wn2, Gn2, Ji2, Rc2, On2, r02, Zl2, Dm2, C22, Cd2, Oi2, E22, cu2, Fa2, Bh2, Tv2, Vs2, fp2, js2, Mh2, Ed2, Av2, Yp2, Jp2, XS2, JS2, wI2, Yu2, xI2, gp2, sc2, I22, Wa, tC2, Ju2, y42, v, Li2, EI2, DI2, Nm2, Nv2, fg2, k42, _I2, NI2, S42, C42, PI2, n02, Pv2, II2, B22, LI2, FI2, RI2, Ol2, M22, sC2, qI2, $I2, lC2, HI2, VI2, cC2, WI2, XI2, QI2, ZI2, ej, tj, rj, nj, ij, pC2, hC2, mC2, oj, aj, fC2, sj, z42, T42, vp2, lj, cj, uj, F22, dj, pj, gC2, hj, mj, A42, vC2, fj, Ms2, kj, xC2, Sj, kC2, Pm2, Ej, O42, zj, po2, j42, i02, G22, Ij, jj, B42, EC2, M42, qr2, Bj, Yc2, DC2, Lv2, o02, ld2, Mj, no2, C02, L42, F42, $42, kg2, Hh2, Vh2, Wj, Hn2, TC2, H42, AC2, Qj, uu2, Zj, Yj, Jj, U42, Kj, eB2, V42, Xs2, Sg2, tB2, rB2, iB2, oB2, W42, hB2, mB2, fB2, Cg2, G42, gB2, _C2, K22, yB2, NC2, PC2, wB2, xB2, X42, Wh2, E02, IC2, Oe2, du2, Im2, SB2, _o2, jC2, oi2, CB2, ra2, BC2, Rl2, xo2, ka2, ty2, MC2, jm2, D02, RC2, z02, xa2, EB2, DB2, qC2, Go2, s02, l02, Gh2, $C2, Tu2, Rv2, zB2, TB2, AB2, OB2, _B2, NB2, Bm2, Xh2, HC2, UC2, VC2, PB2, pu2, Jc2, WC2, GC2, Eg2, Q42, jB2, XC2, Dg2, Z42, MB2, QC2, FB2, RB2, Y42, J42, Js2, ZC2, $B2, YC2, HB2, UB2, WB2, KC2, mr2, K42, XB2, eE2, QB2, ZB2, tE2, e52, KB2, eM2, rM2, iM2, na2, nE2, iE2, oE2, t52, aE2, sE2, oM2, aM2, Kc2, lE2, sM2, cE2, eh2, Mi2, ny2, cl2, Mm2, iy2, r52, oy2, uE2, dE2, lM2, cM2, dM2, pM2, hi2, pE2, ay2, hM2, fM2, gM2, hE2, bM2, mE2, fE2, gE2, wM2, xM2, kM2, yE2, CM2, th2, wE2, xE2, kE2, SE2, EM2, CE2, DM2, zM2, EE2, TM2, AM2, OM2, _M2, NM2, Za2, IM2, TE2, Fm2, MM2, LM2, n52, FM2, PE2, Dd2, uy2, _l2, Ha2, rh2, jE2, T02, BE2, Un2, iL, py2, zd2, lL, LE2, cL, uL, o52, Tg2, qE2, xt, Fi2, rn2, _L, $E2, PL, BL, ML, $m2, Hm2, UE2, VE2, s52, $v2, FL, WE2, l52, RL, UL, WL, GL, Qs2, QL, JL, KL, tF2, Ku2, Td2, iF2, QE2, $t2, uo2, zl2, Tl2, oF2, Qi2, cd2, Zi2, La2, Cs2, Hv2, Uv2, Vv2, nh2, ih2, ud2, ZE2, aF2, sF2, YE2, lF2, cF2, uF2, JE2, hy2, Um2, my2, Vm2, Wm2, Gm2, fF2, MF2, Ad2, fy2, $F2, d52, tD2, UF2, VF2, WF2, GF2, nD2, XF2, gy2, vy2, by2, Xm2, go2, rR, oR, aR, m52, mR, f52, ah2, ER, TR, AR, ec2, Ng2, Pg2, PR, Ig2, IR, RR, qR, UR, KR, rq2, nq2, Qm2, uD2, pD2, aq2, wy2, Zv2, hD2, mD2, xy2, fD2, fq2, gq2, vq2, bq2, yq2, wq2, xq2, kq2, lt2, yp2, Sq2, Vn2, Dq2, v52, bD2, Au2, zq2, Tq2, Aq2, Oq2, yD2, b52, _q2, Nq2, Pq2, ky2, Iq2, jq2, Bq2, Mq2, wp2, Lq2, Fq2, Rq2, qq2, $q2, wD2, xD2, Hq2, Uq2, Vq2, kD2, Wq2, Gq2, Xq2, Qq2, Zq2, Yq2, Jq2, Kq2, e$, t$, r$, n$, i$, o$, a$, jg2, s$, l$, c$, u$, fu2, Jm2, d$, p$, h$, m$, Km2, f$, g$, SD2, v$, b$, y$, w$, y52, Yh2, Yv2, S$, D$, os2, O$, c02, DD2, I$, j$, Jv2, M$, L$, w52, F$, R$, U$, V$, A02, Sy2, W$, G$, Kv2, X$, Q$, Cy2, iue, Z$, dc2, Y$, oue, J$, K$, eH, tH, rH, nH, OD2, iH, k52, oH, Jh2, aH, sH, Bg2, lH, cH, _D2, S52, uH, dH, hH, C52, mH, fH, gH, jD, rb, Dy2, BD2, MD2, tf2, kH, SH, CH, EH, DH, as2, gr2, gu2, O02, ao2, Pn2, br2, Hr2, nb, OH, _H, D52, NH, PH, IH, jH, qD2, BH, $D, MH, LH, FH, RH, z52, qH, vu2, $H, UH, WH, GH, QH, ZH, JH, KH, tU, rU, nU, iU, oU, aU, sU, Mg2, rc2, XD, _02, zy2, pc2, of2, lU, cU, uU, pU, QD, jl2, ZD, bU, kU, CU, Kh2, YD, KD, TU, AU, OU, _U, A52, Ns2, ja2, ez2, NU, PU, tz2, ib, ob, ss2, jU, ab, BU, MU, LU, sh2, FU, O52, RU, sb, qU, Lg2, sf2, $U, N02, Qo2, HU, UU, VU, WU, GU, XU, QU, ZU, YU, JU, KU, eV, tV, rV, nV, iV, oV, aV, sV, lV, cV, _52, uV, dV, pV, nc2, fV, gV, yV, bi2, jr2, EV, lb, ic2, rz2, Fg2, P52, Rg2, I52, nz2, cb, oa2, ub, iz2, AV, OV, yu2, qc2, db, pb, FV, aa2, RV, qV, ea2, oz2, $V, HV, UV, lf2, WV, GV, XV, QV, ho2, Ou2, Od2, _d2, oW, aW, sW, lW, _u2, sz2, em2, Oy2, pW, hW, Kn2, qo2, $l2, bW, wW, xW, M52, kW, dz2, tm2, SW, rm2, CW, Qt2, EW, L52, DW, zW, Ls2, F52, TW, NW, PW, Al2, q52, $52, I02, IW, pz2, jW, BW, hb2, H52, U52, hz2, HW, UW, VW, WW, Ki2, Eo2, Ze2, XW, QW, ZW, YW, JW, KW, mz2, tG, rG, nG, At2, lh2, _y2, xs2, Ny2, nm2, eu2, Ya2, p02, ko2, wu2, fi2, ma2, oG, aG, sG, lG, cG, uG, _t2, mb, ch2, Cc2, pG, hG, mG, fG, gG, vG, bG, yG, wG, V52, xG, j02, va2, Sp2, W52, qg2, CG, G52, X52, qa2, fb, EG, gz2, Jr2, rt2, tl2, vz2, bz2, yz2, B02, Iy2, DG, zG, To2, ls2, rl2, gb2, AG, OG, Ar2, j, He2, $, ee, Vr2, ht2, xi2, Nu2, Ot2, Sn2, so2, uf2, re, hs2, he2, wz2, Z52, Y52, $g2, J52, K52, Hg2, im2, Cp2, Ug2, Lt2, sn2, ci2, ks2, xl2, vb2, Ep2, Vg2, Dp2, e32, _G, df2, Ho2, NG, PG, IG, jG, BG, jy2, zi2, xz2, MG, LG, kz2, FG, RG, qG, $G, zp2, Sz2, Cz2, HG, ke2, Zr2, kl2, Ba2, UG, VG, Ez2, om2, am2, sm2, hn2, cs2, WG, GG, XG, QG, In2, t32, Dz2, ZG, bb2, h02, ur2, bo2, Nd2, YG, Ge2, Ao2, By2, My2, Ri2, nl2, Cr2, Tz2, Az2, JG, KG, eX, tX, rX, nX, iX, oX, us2, Fy2, Oz2, aX, Ap2, sX, hf2, lX, n32, i32, cX, Pz2, Iz2, wb2, jz2, pX, Bz2, dd2, Ry2, Mz2, hX, mX, Lz2, Wg2, Gg2, xb2, Op2, fX, gX, Fz2, Xg2, Qg2, Zg2, vX, Rz2, bX, qz2, Pd2, yX, wX, xX, $z2, kX, Hz2, Uz2, SX, Ja2, o32, CX, qy2, $y2, Vz2, Wz2, ff2, Ta2, EX, Aa2, Gz2, l32, Xz, Qz2, c32, Zz2, Vy2, Wy2, u32, d32, Yz, DX, Yg2, p32, Jz, Kz, Pu2, M02, zX, TX, eT2, AX, h32, OX, m32, _X, rT2, Jg2, Kg2, f32, g32, v32, NX, b32, y32, Fs2, nT2, PX, IX, jX, BX, kb2, MX, LX, w32, FX, RX, x32, Gy2, k32, Xy2, iT2, oT2, aT2, qX, S32, _p2, e12, C32, gf2, Qy2, sT2, $X, HX, lT2, Zy2, UX, vf2, cT2, Re2, Sr2, Sb2, Yy2, dT2, XX, YX, JX, KX, gT2, tQ, rQ, nQ, iQ, oQ, aQ, sQ, um2, lQ, uQ, dQ, wT2, vo2, xT2, mQ, gQ, vQ, bQ, r12, OQ, _Q, NQ, qQ, $Q, TT2, Jy2, O32, UQ, VQ, Ky2, OT2, No2, Oa2, XQ, NT2, _32, PT2, IT2, QQ, P32, ZQ, YQ, L02, KQ, eZ, rZ, nZ, oZ, sZ, jT2, cZ, uZ, dZ, tw2, pZ, Di2, co2, Sl2, hZ, Iu2, fZ, gZ, rr2, vZ, ed2, Nr2, ui2, Np2, bZ, yZ, wZ, xZ, kZ, SZ, CZ, EZ, DZ, zZ, TZ, rw2, AZ, OZ, BT2, _Z, MZ, I32, nw2, j32, FZ, RZ, iw2, Eb2, B32, hd2, VZ, M32, WZ, L32, F32, GZ, XZ, tY, rY, LT2, nY, iY, oY, aY, sY, lY, cY, uY, dY, pY, hY, mY, fY, gY, vY, bY, yY, wY, xY, kY, SY, CY, EY, DY, zY, TY, AY, OY, _Y, NY, PY, IY, jY, BY, MY, LY, FY, RY, qY, $Y, HY, UY, VY, WY, GY, XY, QY, ZY, YY, JY, KY, eJ, tJ, rJ, nJ, iJ, oJ, aJ, sJ, lJ, cJ, uJ, dJ, pJ, hJ, mJ, fJ, gJ, vJ, bJ, yJ, wJ, xJ, kJ, SJ, CJ, EJ, DJ, zJ, TJ, AJ, OJ, _J, NJ, PJ, IJ, jJ, BJ, MJ, LJ, FJ, RJ, qJ, $J, HJ, UJ, VJ, WJ, GJ, XJ, QJ, ZJ, YJ, JJ, KJ, eK, tK, rK, nK, iK, FT2, aK, lK, uK, dK, pK, Pp2, mK, fK, q32, $32, vK, bK, RT2, yK, wK, xK, Ec2, kK, H32, SK, U32, CK, EK, V32, DK, zK, TK, AK, OK, _K, NK, Tc2, ow2, aw2, sw2, bf2, qT2, $T2, HT2, UT2, VT2, Db2, WT2, pl2, GT2, MK, n12, W32, i12, G32, LK, o12, X32, md2, FK, RK, qK, YT2, $K, HK, UK, VK, cw2, kn2, WK, uw2, Po2, a12, Q32, s12, Z32, l12, Y32, c12, J32, u12, K32, d12, e62, KT2, eA2, ms2, lee, tA2, cee, rA2, uee, nA2, dee, iA2, pee, oA2, hee, aA2, mee, sA2, fee, lA2, gee, cA2, vee, bee, tu2, dA2, dm2, Kr2, Eee, mA2, n62, _ee, Nee, Pee, Iee, jee, gA2, Hee, Vee, Zo2, Qee, Ti2, i62, Yee, Jee, Kee, ete, nte, ite, p12, Da2, o62, m02, a62, s62, h12, l62, c62, m12, u62, f12, d62, p62, h62, m62, zb2, f62, g62, g12, v62, SA2, b62, y62, w62, x62, k62, S62, C62, E62, D62, z62, T62, A62, O62, _62, N62, P62, I62, j62, B62, M62, L62, F62, R62, q62, $62, H62, U62, V62, W62, G62, X62, Q62, Z62, Y62, ua2, J62, K62, e72, t72, r72, n72, i72, v12, o72, a72, s72, l72, c72, u72, b12, y12, d72, p72, h72, m72, f72, g72, v72, b72, y72, w72, x72, k72, S72, w12, C72, E72, D72, x12, k12, z72, T72, A72, O72, _72, N72, S12, P72, C12, I72, E12, j72, B72, M72, L72, F72, R72, q72, $72, H72, U72, V72, W72, G72, X72, Q72, Z72, Y72, J72, K72, e82, t82, r82, n82, i82, Rte, qte, aue, o82, a82, s82, l82, D12, c82, u82, Vte, Wte, bw2, Qte, Yte, Jte, Kte, rre, ire, ore, are, pm2, hm2, jd2, WA2, h82, m82, f82, te, sre, lre, cre, ure, GA2, pre, xe, b82, Je2, mre, fre, y82, Ae, fd2, x82, gre, R, yw2, Wt2, C82, Fn2, vre, bre, ft2, ww2, Mu2, xw2, yre, wre, xre, kre, kw2, Sre, Cre, Ere, Dre, Vt2, zre, Tre, Are, Ore, _re, Nre, Pre, Ire, jre, Bre, Mre, Fre, D82, Rre, qre, $re, me, Hre, Ure, Vre, Wre, Gre, Xre, Qre, Zre, Yre, Jre, Kre, ene, tne, rne, nne, ine, one, ane, sne, lne, cne, une, dne, pne, hne, fne, gne, vne, bne, yne, wne, xne, kne, Sne, Ene, Dne, zne, Tne, Ane, _ne, Nne, Pne, Ine, jne, Bne, Mne, Lne, Rne, qne, $ne, Hne, Vne, Wne, Gne, Xne, Qne, Tb2, Zne, Yne, Jne, Kne, eie, tie, rie, nie, iie, oie, aie, sie, XA2, lie, cie, uie, die, pie, hie, mie, fie, gie, vie, bie, QA2, ZA2, yie, wie, YA2, Sw2, Sie, Cie, Eie, Die, zie, JA2, Tie, Aie, Oie, _ie, Pie, Iie, jie, Mie, Lie, Fie, KA2, U82, eO2, Rie, qie, rd2, Hie, Uie, Vie, Gie, V82, Xie, Qie, Zie, Yie, W82, Kie, toe, roe, noe, ioe, aoe, soe, G82, loe, X82, coe, uoe, doe, poe, moe, foe, z12, Q82, goe, voe, boe, tO2, woe, xoe, koe, Soe, Eoe, Doe, J82, Hl2, Ooe, _oe, K82, Noe, f02, Ul2, Poe, nO2, Cw2, iO2, ek, Ioe, Bd2, Bp2, tk, joe, Boe, da, ru2, rk, oO2, aO2, Moe, sO2, Loe, nk, Foe, A12, lO2, Roe, qoe, $oe, dh2, Hoe, Uoe, Voe, ik, ok, O12, Woe, Ab2, ak, Goe, Xoe, Qoe, Mp2, sk, Lp2, Zoe, fs2, Yoe, _12, Joe, cO2, Fp2, N12, Dw2, hl2, hO2, rae, lk, _i2, Md2, gd2, nae, mO2, iae, oae, aae, sae, lae, ph2, Ss2, zw2, Tw2, fO2, hh2, Ob2, g02, Vl2, mm2, Ef2, _b2, Bl2, Ml2, Ld2, Nb2, Aw2, Yo2, Xa2, Ai2, zs2, Ts2, gO2, ku2, vO2, cae, Ow2, uae, yo2, il2, Pb2, bO2, dae, pae, hae, yO2, mae, wO2, fae, gae, _w2, vae, bae, _e2, Eae, Dae, zae, Tae, v02, Nae, Iae, jae, Bae, Mae, Lae, SO2, Fae, Rae, qae, hk, $ae, P12, Uae, Vae, Wae, Gae, CO2, Xae, Qae, Zae, EO2, Yae, DO2, zO2, TO2, AO2, Jae, OO2, fc2, ese, tse, rse, nse, Rr2, Qr2, ise, ose, _O2, ase, sse, lse, cse, use, dse, pse, hse, di2, gk, mse, NO2, fse, gse, bse, yse, vk, bk, wse, xse, zc2, kse, Cse, So2, MO2, Su2, Pw2, gi2, gs2, Fse, I12, YO2, jw2, qp2, $a2, H02, r_2, Ck, Kse, ele, tle, rle, sle, i_2, lle, cle, ule, f_2, mh2, g_2, fle, gle, vle, v_2, wle, kle, Sle, fh2, Ale, Nle, Ple, Ile, Ak, Fle, j12, Rle, Hle, Ule, Vle, Gle, Xle, Jle, Kle, ece, tce, Lb2, Ok, _k, B12, Nk, M12, L12, Pk, Ik, F12, jk, cce, uce, dce, pce, Fd2, yce, wce, Bk, Fce, Rce, Fb2, qce, Wl2, $ce, Hce, Uce, Vce, Wce, Gce, Xce, Qce, Zce, Yce, Jce, Kce, k_2, tue, rue, C_2, Mk, Fk, nue, sue;
-var init_editor_web_component_BXJNTwg7 = __esm({
-  "node_modules/@serlo/editor-web-component/dist/editor-web-component-BXJNTwg7.js"() {
+var init_editor_web_component_D93UQdFo = __esm({
+  "node_modules/@serlo/editor-web-component/dist/editor-web-component-D93UQdFo.js"() {
     qk = { exports: {} };
     gm2 = {};
     $k = { exports: {} };
@@ -101579,11 +101579,11 @@ Jede*r kann Inhalte bearbeiten, aber du brauchst einen Account.
                 },
                 {
                   type: "math",
-                  src: "\\\\left[1;3\\\\right]",
+                  src: "\\left[1;3\\right]",
                   inline: true,
                   children: [
                     {
-                      text: "\\\\left[1;3\\\\right]"
+                      text: "\\left[1;3\\right]"
                     }
                   ]
                 },
@@ -101592,11 +101592,11 @@ Jede*r kann Inhalte bearbeiten, aber du brauchst einen Account.
                 },
                 {
                   type: "math",
-                  src: "\\\\Rightarrow x_1=1",
+                  src: "\\Rightarrow x_1=1",
                   inline: true,
                   children: [
                     {
-                      text: "\\\\Rightarrow x_1=1\\\\;x_2=3"
+                      text: "\\Rightarrow x_1=1\\;x_2=3"
                     }
                   ]
                 },
@@ -101637,7 +101637,7 @@ Jede*r kann Inhalte bearbeiten, aber du brauchst einen Account.
               {
                 left: "m",
                 sign: "equals",
-                right: "\\\\frac{f(3)-f(1)}{3-1}",
+                right: "\\frac{f(3)-f(1)}{3-1}",
                 transform: "",
                 explanation: {
                   plugin: "text",
@@ -101752,12 +101752,11 @@ Jede*r kann Inhalte bearbeiten, aber du brauchst einen Account.
 });
 
 // node_modules/@serlo/editor-web-component/dist/serlo-editor-web-component.js
-init_editor_web_component_BXJNTwg7();
+init_editor_web_component_D93UQdFo();
 
 // js/serlo.js
 import { call } from "core/ajax";
 import { addNotification } from "core/notification";
-import { addIconToContainerWithPromise } from "core/loadingicon";
 import { get_string } from "core/str";
 var saveEditorState = async (serloid, state) => {
   const [result] = await Promise.allSettled(
@@ -101791,8 +101790,6 @@ var init = async (serloid) => {
     "state-changed",
     () => saveButton?.classList.remove("disabled")
   );
-  const loaderContainer = document.querySelector("#serlo-root > div");
-  const loader = addIconToContainerWithPromise(loaderContainer);
   const [initialState] = await Promise.all(
     call([
       {
@@ -101803,14 +101800,13 @@ var init = async (serloid) => {
   );
   if (initialState) editor.initialState = JSON.parse(initialState);
   editor.classList.remove("hidden");
-  loader.resolve();
 };
 export {
   init
 };
 /*! Bundled license information:
 
-@serlo/editor-web-component/dist/index-BglCwUPx-CCfy-iqL.js:
+@serlo/editor-web-component/dist/index-BglCwUPx-sXv6YRij.js:
   (*!
    *  decimal.js v10.4.3
    *  An arbitrary-precision Decimal type for JavaScript.
@@ -101832,7 +101828,7 @@ export {
    * Dual licensed under the MIT or GPL Version 2 licenses.
    **)
 
-@serlo/editor-web-component/dist/editor-web-component-BXJNTwg7.js:
+@serlo/editor-web-component/dist/editor-web-component-D93UQdFo.js:
   (*!
    * cookie
    * Copyright(c) 2012-2014 Roman Shtylman

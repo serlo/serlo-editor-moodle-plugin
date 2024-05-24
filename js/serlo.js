@@ -1,7 +1,7 @@
 import { EditorWebComponent } from "@serlo/editor-web-component";
 import { call } from "core/ajax";
 import { addNotification } from "core/notification";
-import { addIconToContainerWithPromise } from "core/loadingicon";
+// import { addIconToContainerWithPromise } from "core/loadingicon";
 import { get_string } from "core/str";
 
 const saveEditorState = async (serloid, state) => {
@@ -37,8 +37,8 @@ export const init = async (serloid) => {
     saveButton?.classList.remove("disabled"),
   );
 
-  const loaderContainer = document.querySelector("#serlo-root > div");
-  const loader = addIconToContainerWithPromise(loaderContainer);
+  // const loaderContainer = document.querySelector("#serlo-root > div");
+  // const loader = addIconToContainerWithPromise(loaderContainer);
   const [initialState] = await Promise.all(
     call([
       {
@@ -49,5 +49,5 @@ export const init = async (serloid) => {
   );
   if (initialState) editor.initialState = JSON.parse(initialState);
   editor.classList.remove("hidden");
-  loader.resolve();
+  // loader.resolve();
 };

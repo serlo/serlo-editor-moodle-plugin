@@ -16,7 +16,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 // This page prints a particular instance of serlo.
 
-require(__DIR__ . '/../../config.php');
+require __DIR__ . '/../../config.php';
 
 $id = optional_param('id', 0, PARAM_INT);
 
@@ -46,7 +46,7 @@ $PAGE->set_heading($course->fullname);
 
 $modes = array(
   true => "write",
-  false => "read"
+  false => "read",
 );
 
 // Print the page header.
@@ -58,8 +58,8 @@ if ($serlo->intro) {
 
 echo $OUTPUT->box_start('generalbox', 'notallowenter');
 
-if(has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
-  echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled" style="margin-bottom: 42px;">'. get_string("submit"). '</a>';
+if (has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
+  echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled" style="margin-bottom: 42px;">' . get_string("submit") . '</a>';
 }
 
 echo '<div id="serlo-root">

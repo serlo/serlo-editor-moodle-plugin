@@ -138,21 +138,26 @@ function serlo_get_course_content_items(
 
 function serlo_get_content_types() {
   return [
+    'empty' => array(
+      'image' => 'serlo-logo-feather',
+      'title' => get_string('empty', 'mod_serlo'),
+      'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
+    ),
     'text' => array(
       'image' => 'text-icon',
       'title' => get_string('text', 'mod_serlo'),
       'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
     ),
-    'articleIntroduction' => array(
-      'image' => 'multimedia-icon',
-      'title' => get_string('articleIntroduction', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"articleIntroduction","state":{"explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"multimedia":{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}},"illustrating":true,"width":50}}]}',
-    ),
-    'image' => array(
-      'image' => 'image-icon',
-      'title' => get_string('image', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}}]}',
-    ),
+    // 'articleIntroduction' => array(
+    //   'image' => 'multimedia-icon',
+    //   'title' => get_string('articleIntroduction', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"articleIntroduction","state":{"explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"multimedia":{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}},"illustrating":true,"width":50}}]}',
+    // ),
+    // 'image' => array(
+    //   'image' => 'image-icon',
+    //   'title' => get_string('image', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}}]}',
+    // ),
     'spoiler' => array(
       'image' => 'spoiler-icon',
       'title' => get_string('spoiler', 'mod_serlo'),
@@ -168,31 +173,31 @@ function serlo_get_content_types() {
       'title' => get_string('serloTable', 'mod_serlo'),
       'initalContent' => '{"plugin":"rows","state":[{"plugin":"serloTable","state":{"rows":[{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}],"tableType":"OnlyColumnHeader"}}]}',
     ),
-    'injection' => array(
-      'image' => 'injection-icon',
-      'title' => get_string('injection', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"injection","state":""}]}',
-    ),
+    // 'injection' => array(
+    //   'image' => 'injection-icon',
+    //   'title' => get_string('injection', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"injection","state":""}]}',
+    // ),
     'equations' => array(
       'image' => 'equation-icon',
       'title' => get_string('equations', 'mod_serlo'),
       'initalContent' => '{"plugin":"rows","state":[{"plugin":"equations","state":{"steps":[{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}],"firstExplanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"transformationTarget":"equation"}}]}',
     ),
-    'geogebra' => array(
-      'image' => 'geogebra-icon',
-      'title' => get_string('geogebra', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"geogebra","state":""}]}',
-    ),
+    // 'geogebra' => array(
+    //   'image' => 'geogebra-icon',
+    //   'title' => get_string('geogebra', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"geogebra","state":""}]}',
+    // ),
     'highlight' => array(
       'image' => 'code-icon',
       'title' => get_string('highlight', 'mod_serlo'),
       'initalContent' => '{"plugin":"rows","state":[{"plugin":"highlight","state":{"code":"","language":"text","showLineNumbers":false}}]}',
     ),
-    'video' => array(
-      'image' => 'video-icon',
-      'title' => get_string('video', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"video","state":{"src":"","alt":""}}]}',
-    ),
+    // 'video' => array(
+    //   'image' => 'video-icon',
+    //   'title' => get_string('video', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"video","state":{"src":"","alt":""}}]}',
+    // ),
     'scMcExercise' => array(
       'image' => 'auswahlaufgaben-icon',
       'title' => get_string('scMcExercise', 'mod_serlo'),
@@ -203,11 +208,11 @@ function serlo_get_content_types() {
       'title' => get_string('inputExercise', 'mod_serlo'),
       'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"inputExercise","state":{"type":"input-number-exact-match-challenge","unit":"","answers":[{"value":"","isCorrect":true,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
     ),
-    'h5p' => array(
-      'image' => 'fallback-icon',
-      'title' => get_string('h5p', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"h5p","state":""}}}]}',
-    ),
+    // 'h5p' => array(
+    //   'image' => 'fallback-icon',
+    //   'title' => get_string('h5p', 'mod_serlo'),
+    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"h5p","state":""}}}]}',
+    // ),
     'blanksExercise' => array(
       'image' => 'auswahlaufgaben-icon',
       'title' => get_string('blanksExercise', 'mod_serlo'),

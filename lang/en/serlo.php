@@ -39,6 +39,7 @@ $string['crontask'] = 'Serlo schedule task';
 
 $string['initialstate'] = 'Initial Content';
 
+$string['empty'] = 'Editor';
 $string['articleIntroduction'] = 'Explanation with multimadia-content';
 $string['text'] = 'Text';
 $string['image'] = 'Image';

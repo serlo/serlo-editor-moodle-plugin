@@ -59,11 +59,13 @@ if ($serlo->intro) {
 echo $OUTPUT->box_start('generalbox', 'notallowenter');
 
 if (has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
-  echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled" style="margin-bottom: 42px;">' . get_string("submit") . '</a>';
+  echo '<div class="serlo save-wrapper">';
+  echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled">' . get_string("save") . '</a>';
+  echo '</div>';
 }
 
 echo '<div id="serlo-root">
-    <div></div>
+    <div class="serlo loader-wrapper"></div>
     <serlo-editor class="hidden" mode="' . $modes[$PAGE->user_is_editing()] . '"></serlo-editor>
   </div>';
 

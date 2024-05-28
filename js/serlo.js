@@ -1,7 +1,7 @@
 import { EditorWebComponent } from "@serlo/editor-web-component";
 import { call } from "core/ajax";
 import { addNotification } from "core/notification";
-// import { addIconToContainerWithPromise } from "core/loadingicon";
+import { addIconToContainerWithPromise } from "core/loadingicon";
 import { get_string } from "core/str";
 
 const saveEditorState = async (serloid, state) => {
@@ -33,12 +33,16 @@ export const init = async (serloid) => {
   saveButton?.addEventListener("click", () =>
     saveEditorState(serloid, editor.currentState),
   );
-  editor.addEventListener("state-changed", () =>
-    saveButton?.classList.remove("disabled"),
-  );
+  editor.addEventListener("state-changed", () => {
+    saveButton?.classList.remove("disabled");
+    window.addEventListener("beforeunload", (e) => {
+      e.preventDefault();
+      e.returnValue = true;
+    });
+  });
 
-  // const loaderContainer = document.querySelector("#serlo-root > div");
-  // const loader = addIconToContainerWithPromise(loaderContainer);
+  const loaderContainer = document.querySelector(".serlo.loader-wrapper");
+  const loader = addIconToContainerWithPromise(loaderContainer);
   const [initialState] = await Promise.all(
     call([
       {
@@ -49,5 +53,5 @@ export const init = async (serloid) => {
   );
   if (initialState) editor.initialState = JSON.parse(initialState);
   editor.classList.remove("hidden");
-  // loader.resolve();
+  loader.resolve();
 };

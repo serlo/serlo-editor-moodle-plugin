@@ -39,6 +39,8 @@ $string['crontask'] = 'Serlo schedule task';
 
 $string['initialstate'] = 'Initial Content';
 
+$string['firefox_warning'] = 'There are some problems with Firefox at the moment. Please use a Chromium based browser like Chrome, Brave or Opera for a better experience.';
+
 $string['empty'] = 'Editor';
 $string['articleIntroduction'] = 'Explanation with multimadia-content';
 $string['text'] = 'Text';

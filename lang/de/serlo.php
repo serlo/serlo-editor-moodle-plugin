@@ -39,6 +39,8 @@ $string['crontask'] = 'Serlo Cron Task';
 
 $string['initialstate'] = 'Initialer Inhalt';
 
+$string['firefox_warning'] = 'Im Moment gibt es einige Probleme mit Firefox. Bitte nutzen Sie einen Chromium basierten Browser wie Chrome, Brave oder Opera für ein besseres Editier-Erlebnis.';
+
 $string['empty'] = 'Editor';
 $string['articleIntroduction'] = 'Erklärung mit Multimedia-Inhalt';
 $string['text'] = 'Text';

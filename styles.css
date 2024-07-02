@@ -1,0 +1,12 @@
+/* This file is automatically added by Moodle */
+
+.serlo.save-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 42px;
+}
+
+.serlo.loader-wrapper {
+  display: flex;
+  justify-content: center;
+}

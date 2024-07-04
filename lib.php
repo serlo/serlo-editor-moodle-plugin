@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot .'/mod/serlo/locallib.php');
+
 /**
  * Given an object containing all the necessary data,
  * (defined by the form in mod_form.php) this function
@@ -127,7 +129,7 @@ function serlo_get_course_content_items(
       new moodle_url('/course/modedit.php', array("course" => $course->id, "add" => "serlo", "return" => 0, "type" => $key)),
       $OUTPUT->pix_icon($value['image'], '', 'serlo', ['class' => "activityicon nofilter"]),
       $defaultmodulecontentitem->get_help(), // . get_string($key . '_help'),
-      $defaultmodulecontentitem->get_archetype(),
+      SERLO_CONTENT_ITEM_ARCHETYPE,
       $defaultmodulecontentitem->get_component_name(),
       $defaultmodulecontentitem->get_purpose()
     );

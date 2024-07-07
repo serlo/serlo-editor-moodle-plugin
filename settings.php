@@ -26,11 +26,21 @@ defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_heading('modserloplaceholder', get_string('settings_placeholder', 'mod_serlo'), ''));
+    $settings->add(
+        new admin_setting_configtext(
+            'serlo/editor_secret',
+            get_string('settings_editor_secret_label', 'mod_serlo'),
+            get_string('settings_editor_secret_description', 'mod_serlo'),
+            '',
+            PARAM_TEXT,
+            50,
+        )
+    );
 }
 
 // $ADMIN->add('modsettings', new admin_category('modsettingsserlocat', 
 //             get_string('pluginname', 'mod_serlo'), $module->is_enabled() === false));
-    
+
 // $ADMIN->add('modsettingsserlocat', $settings_modserlo);
 
 //$external_page = new admin_externalpage('modserloexternal', 'External page',

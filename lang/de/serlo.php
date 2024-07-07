@@ -57,3 +57,8 @@ $string['scMcExercise'] = 'Aufgabe Auswahlaufgabe';
 $string['inputExercise'] = 'Aufgabe Eingabefeld';
 $string['h5p'] = 'Aufgabe H5P';
 $string['blanksExercise'] = 'Aufgabe Lückentext';
+
+$string['invalidserloid'] = 'Invalid serlo ID';
+
+$string['setting_editor_secret_label'] = 'Serlo editor secret';
+$string['setting_editor_secret_description'] = 'Editor secret description';

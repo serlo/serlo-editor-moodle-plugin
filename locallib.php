@@ -15,7 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Library of functions for serlo outside of the core api
+ * Library of functions and constants for module serlo
+ *
+ * @package   mod_serlo
+ * @author    Faisal Kaleem <faisal@wizcoders.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
+
+if (!defined('SERLO_CONTENT_ITEM_ARCHETYPE')) {
+    define('SERLO_CONTENT_ITEM_ARCHETYPE', 99);
+}

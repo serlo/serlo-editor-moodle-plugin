@@ -14,6 +14,10 @@ import {
   get_string
 } from "core/str";
 
+const preventLeavePage = (e) => {
+  e.preventDefault();
+}
+
 const saveEditorState = async (serloid, state) => {
   const [result] = await Promise.allSettled(
     call([{
@@ -32,6 +36,8 @@ const saveEditorState = async (serloid, state) => {
     });
   } else {
     const message = await get_string("serlosaved", "mod_serlo");
+    // Remove preventLeavePage if state is saved!
+    window.removeEventListener("beforeunload", preventLeavePage);
     addNotification({
       message,
       type: "info"
@@ -50,10 +56,7 @@ export const init = async (serloid) => {
   );
   editor.addEventListener("state-changed", () => {
     saveButton?.classList.remove("disabled");
-    window.addEventListener("beforeunload", (e) => {
-      e.preventDefault();
-      e.returnValue = true;
-    });
+    window.addEventListener("beforeunload", preventLeavePage);
   });
 
   const loaderContainer = document.querySelector(".serlo.loader-wrapper");

@@ -20,15 +20,18 @@
  * @package   mod_serlo
  * @author    Faisal Kaleem <faisal@wizcoders.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Faisal Kaleem (http://wizcoders.com)
  */
 
-defined('MOODLE_INTERNAL') || die();
-
+/**
+ * upgrade this serlo instance
+ * @param int $oldversion The old version of the assign module
+ * @return bool
+ */
 function xmldb_serlo_upgrade($oldversion) {
     global $DB;
     $dbman = $DB->get_manager();
     if ($oldversion < 2024052000) {
-
         // Define field id to be added to serlo.
         $table = new xmldb_table('serlo');
         $field = new xmldb_field('state', XMLDB_TYPE_TEXT, null, null, null, null, null, null);

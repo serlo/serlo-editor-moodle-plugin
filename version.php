@@ -20,6 +20,7 @@
  * @package   mod_serlo
  * @author    Faisal Kaleem <faisal@wizcoders.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Faisal Kaleem (http://wizcoders.com)
  */
 
 defined('MOODLE_INTERNAL') || die();
@@ -27,4 +28,3 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version = 2024061400; // The current module version (Date: YYYYMMDDXX).
 $plugin->requires = 2022041900; // Requires this Moodle version.
 $plugin->component = 'mod_serlo'; // Full name of the plugin (used for diagnostics).
-//$plugin->cron      = 300;

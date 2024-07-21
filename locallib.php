@@ -20,9 +20,8 @@
  * @package   mod_serlo
  * @author    Faisal Kaleem <faisal@wizcoders.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Faisal Kaleem (http://wizcoders.com)
  */
-
-defined('MOODLE_INTERNAL') || die();
 
 if (!defined('SERLO_CONTENT_ITEM_ARCHETYPE')) {
     define('SERLO_CONTENT_ITEM_ARCHETYPE', 99);

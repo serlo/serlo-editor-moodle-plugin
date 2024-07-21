@@ -20,45 +20,53 @@
  * @package   mod_serlo
  * @author    Faisal Kaleem <faisal@wizcoders.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Faisal Kaleem (http://wizcoders.com)
  */
 
-$string['pluginname'] = 'Serlo';
-$string['pluginadministration'] = 'Serlo Administration';
+$string['articleIntroduction'] = 'Erklärung mit Multimedia-Inhalt';
+$string['blanksExercise'] = 'Aufgabe Lückentext';
+
+$string['box'] = 'Box';
+
+$string['crontask'] = 'Serlo Cron Task';
+
+$string['empty'] = 'Editor';
+$string['equations'] = 'Terme und Gleichungen';
+
+$string['firefox_warning'] = 'Im Moment gibt es einige Probleme mit Firefox. ' .
+    'Bitte nutzen Sie einen Chromium basierten Browser wie Chrome, ' .
+    'Brave oder Opera für ein besseres Editier-Erlebnis.';
+
+$string['geogebra'] = 'GeoGebra Applet';
+
+$string['h5p'] = 'Aufgabe H5P';
+$string['highlight'] = 'Code';
+
+$string['image'] = 'Bild';
+$string['initialstate'] = 'Initialer Inhalt';
+$string['injection'] = 'serlo.org Inhalt';
+$string['inputExercise'] = 'Aufgabe Eingabefeld';
+$string['intro'] = 'Einleitung';
+$string['invalidserloid'] = 'Invalid serlo ID';
+
+
 $string['modulename'] = 'Serlo';
 $string['modulename_help'] = 'The serlo activity module enables participants to ...';
 $string['modulename_link'] = 'mod/serlo/view.php';
 $string['modulenameplural'] = 'Serlos';
+
+$string['pluginadministration'] = 'Serlo Administration';
+$string['pluginname'] = 'Serlo';
+
+$string['scMcExercise'] = 'Aufgabe Auswahlaufgabe';
+$string['serloTable'] = 'Tabelle';
 $string['serlosaved'] = 'Serlo State gespeichert!';
 $string['serlosaveerror'] = 'Fehler beim Speichern des Serlo States: ';
-
+$string['setting_editor_secret_description'] = 'Editor secret description';
+$string['setting_editor_secret_label'] = 'Serlo editor secret';
 $string['settings_placeholder'] = 'Platzhalter für Serlo Einstellungen';
 
-$string['intro'] = 'Einleitung';
-
-$string['crontask'] = 'Serlo Cron Task';
-
-$string['initialstate'] = 'Initialer Inhalt';
-
-$string['firefox_warning'] = 'Im Moment gibt es einige Probleme mit Firefox. Bitte nutzen Sie einen Chromium basierten Browser wie Chrome, Brave oder Opera für ein besseres Editier-Erlebnis.';
-
-$string['empty'] = 'Editor';
-$string['articleIntroduction'] = 'Erklärung mit Multimedia-Inhalt';
-$string['text'] = 'Text';
-$string['image'] = 'Bild';
 $string['spoiler'] = 'Spolier';
-$string['box'] = 'Box';
-$string['serloTable'] = 'Tabelle';
-$string['injection'] = 'serlo.org Inhalt';
-$string['equations'] = 'Terme und Gleichungen';
-$string['geogebra'] = 'GeoGebra Applet';
-$string['highlight'] = 'Code';
+$string['text'] = 'Text';
+
 $string['video'] = 'Video';
-$string['scMcExercise'] = 'Aufgabe Auswahlaufgabe';
-$string['inputExercise'] = 'Aufgabe Eingabefeld';
-$string['h5p'] = 'Aufgabe H5P';
-$string['blanksExercise'] = 'Aufgabe Lückentext';
-
-$string['invalidserloid'] = 'Invalid serlo ID';
-
-$string['setting_editor_secret_label'] = 'Serlo editor secret';
-$string['setting_editor_secret_description'] = 'Editor secret description';

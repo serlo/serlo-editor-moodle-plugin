@@ -1,6 +1,37 @@
-# Serlo moodle integration
+## Moodle - mod Serlo moodle integration
+This plugin adds a serlo mod to moodle
 
-This plugin adds a serlo activity to moodle
+## Author
+* Author: Faisal Kaleem, [adornis.de](https://adornis.de/)
+* Min. required: Moodle 4.4
+* Supports PHP: 8.1
+
+![Moodle404](https://img.shields.io/badge/moodle-4.4-brightgreen.svg?logo=moodle)
+
+![PHP8.1](https://img.shields.io/badge/PHP-8.1-brightgreen.svg?logo=php)
+
+## List of features
+
+- List of features
+- ...
+
+## Installation
+
+1.  Copy this plugin to the `mod\serlo` folder on the server
+2.  Login as administrator
+3.  Go to Site Administrator > Notification
+4.  Install the plugin
+
+## Usage
+- 
+
+## License
+
+Apache License, Version 2.0. Please see [License File](LICENSE) for more information.
+
+## Contributing
+
+Contributions are welcome and will be fully credited. We accept contributions via Pull Requests on Github.
 
 ## Development
 

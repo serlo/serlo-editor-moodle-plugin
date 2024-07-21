@@ -18,9 +18,9 @@
  * A scheduled task for serlo, which is called by Moodle cron script.
  *
  * @package   mod_serlo
- * @author    Faisal Kaleem <faisal@wizcoders.com>
+ * @author    Faisal Kaleem <serlo@adornis.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @copyright 2024 Faisal Kaleem (http://wizcoders.com)
+ * @copyright 2024 Serlo (https://adornis.de)
  */
 
 namespace mod_serlo\task;

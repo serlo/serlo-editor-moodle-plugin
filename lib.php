@@ -15,16 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Library of functions and constants for module serlo
+ * Library code for the serlo activity
  *
  * @package   mod_serlo
- * @author    Faisal Kaleem <faisal@wizcoders.com>
+ * @author    Faisal Kaleem <serlo@adornis.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Serlo (https://adornis.de)
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot .'/mod/serlo/locallib.php');
+require_once($CFG->dirroot . '/mod/serlo/locallib.php');
 
 /**
  * Given an object containing all the necessary data,
@@ -32,22 +33,21 @@ require_once($CFG->dirroot .'/mod/serlo/locallib.php');
  * will create a new instance and return the id number
  * of the new instance.
  *
- * @global object
  * @param object $serlo
  * @return int
  */
 function serlo_add_instance($serlo) {
-  global $DB;
-  $serlo->timemodified = time();
+    global $DB;
+    $serlo->timemodified = time();
 
-  $types = serlo_get_content_types();
-  $type = $serlo->type ?? array_key_first($types);
-  unset($serlo->type);
-  $serlo->state = $types[$type]['initalContent'];
+    $types = serlo_get_content_types();
+    $type = $serlo->type ?? array_key_first($types);
+    unset($serlo->type);
+    $serlo->state = $types[$type]['initalContent'];
 
-  $returnid = $DB->insert_record("serlo", $serlo);
+    $returnid = $DB->insert_record("serlo", $serlo);
 
-  return $returnid;
+    return $returnid;
 }
 
 /**
@@ -55,19 +55,18 @@ function serlo_add_instance($serlo) {
  * (defined by the form in mod_form.php) this function
  * will update an existing instance with new data.
  *
- * @global object
  * @param object $serlo
  * @return bool
  */
 function serlo_update_instance($serlo) {
-  global $DB;
+    global $DB;
 
-  $serlo->timemodified = time();
-  $serlo->id = $serlo->instance;
+    $serlo->timemodified = time();
+    $serlo->id = $serlo->instance;
 
-  $DB->update_record("serlo", $serlo);
+    $DB->update_record("serlo", $serlo);
 
-  return true;
+    return true;
 }
 
 /**
@@ -75,33 +74,30 @@ function serlo_update_instance($serlo) {
  * this function will permanently delete the instance
  * and any data that depends on it.
  *
- * @global object
  * @param int $id
  * @return bool
  */
 function serlo_delete_instance($id) {
-  global $DB;
-  if (!$serlo = $DB->get_record('serlo', array('id' => $id))) {
-    return false;
-  }
-  $result = true;
-  // Delete any dependent records here.
-  if (!$DB->delete_records('serlo', array('id' => $serlo->id))) {
-    $result = false;
-  }
+    global $DB;
+    if (!$serlo = $DB->get_record('serlo', ['id' => $id])) {
+        return false;
+    }
+    $result = true;
+    // Delete any dependent records here.
+    if (!$DB->delete_records('serlo', ['id' => $serlo->id])) {
+        $result = false;
+    }
 
-  return $result;
+    return $result;
 }
 
 /**
  * Serlo cron function that is called from cron_task.php
- *
- * @global object $CFG
- * @global moodle_database $DB
+ * @return void
  */
 function serlo_cron() {
-  global $CFG, $DB;
-  mtrace("This is serlo activity module and doesn't have any logic implemented");
+    global $CFG, $DB;
+    mtrace("This is serlo activity module and doesn't have any logic implemented");
 }
 
 /**
@@ -113,111 +109,120 @@ function serlo_cron() {
  * @return array the array of content items.
  */
 function serlo_get_course_content_items(
-  \core_course\local\entity\content_item $defaultmodulecontentitem,
-  \stdClass $user,
-  \stdClass $course
+    \core_course\local\entity\content_item $defaultmodulecontentitem,
+    \stdClass $user,
+    \stdClass $course
 ) {
-  global $OUTPUT;
+    global $OUTPUT;
 
-  $items = [];
+    $items = [];
 
-  foreach (serlo_get_content_types() as $key => $value) {
-    $items[] = new \core_course\local\entity\content_item(
-      $defaultmodulecontentitem->get_id() + 1,
-      $key,
-      new \core_course\local\entity\string_title('Serlo ' . $value['title']),
-      new moodle_url('/course/modedit.php', array("course" => $course->id, "add" => "serlo", "return" => 0, "type" => $key)),
-      $OUTPUT->pix_icon($value['image'], '', 'serlo', ['class' => "activityicon nofilter"]),
-      $defaultmodulecontentitem->get_help(), // . get_string($key . '_help'),
-      SERLO_CONTENT_ITEM_ARCHETYPE,
-      $defaultmodulecontentitem->get_component_name(),
-      $defaultmodulecontentitem->get_purpose()
-    );
-  }
-  return $items;
+    foreach (serlo_get_content_types() as $key => $value) {
+        $items[] = new \core_course\local\entity\content_item(
+            $defaultmodulecontentitem->get_id() + 1,
+            $key,
+            new \core_course\local\entity\string_title('Serlo ' . $value['title']),
+            new moodle_url('/course/modedit.php', ["course" => $course->id, "add" => "serlo", "return" => 0, "type" => $key]),
+            $OUTPUT->pix_icon($value['image'], '', 'serlo', ['class' => "activityicon nofilter"]),
+            $defaultmodulecontentitem->get_help(),
+            SERLO_CONTENT_ITEM_ARCHETYPE,
+            $defaultmodulecontentitem->get_component_name(),
+            $defaultmodulecontentitem->get_purpose()
+        );
+    }
+    return $items;
 }
 
+/**
+ * Set activity of serlo_get_content_types
+ * @return string[][]
+ */
 function serlo_get_content_types() {
-  return [
-    'empty' => array(
-      'image' => 'serlo-logo-feather',
-      'title' => get_string('empty', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
-    ),
-    'text' => array(
-      'image' => 'Text',
-      'title' => get_string('text', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
-    ),
-    // 'articleIntroduction' => array(
-    //   'image' => 'Multimedia',
-    //   'title' => get_string('articleIntroduction', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"articleIntroduction","state":{"explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"multimedia":{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}},"illustrating":true,"width":50}}]}',
-    // ),
-    // 'image' => array(
-    //   'image' => 'Image',
-    //   'title' => get_string('image', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}}]}',
-    // ),
-    'spoiler' => array(
-      'image' => 'Spoiler',
-      'title' => get_string('spoiler', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"spoiler","state":{"richTitle":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}}}]}',
-    ),
-    'box' => array(
-      'image' => 'Box',
-      'title' => get_string('box', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"box","state":{"type":"example","title":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"anchorId":"","content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}}}]}',
-    ),
-    'serloTable' => array(
-      'image' => 'Table',
-      'title' => get_string('serloTable', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"serloTable","state":{"rows":[{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}],"tableType":"OnlyColumnHeader"}}]}',
-    ),
-    // 'injection' => array(
-    //   'image' => 'File',
-    //   'title' => get_string('injection', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"injection","state":""}]}',
-    // ),
-    'equations' => array(
-      'image' => 'Equation',
-      'title' => get_string('equations', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"equations","state":{"steps":[{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}],"firstExplanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"transformationTarget":"equation"}}]}',
-    ),
-    // 'geogebra' => array(
-    //   'image' => 'Geogebra',
-    //   'title' => get_string('geogebra', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"geogebra","state":""}]}',
-    // ),
-    'highlight' => array(
-      'image' => 'Code',
-      'title' => get_string('highlight', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"highlight","state":{"code":"","language":"text","showLineNumbers":false}}]}',
-    ),
-    // 'video' => array(
-    //   'image' => 'Video',
-    //   'title' => get_string('video', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"video","state":{"src":"","alt":""}}]}',
-    // ),
-    'scMcExercise' => array(
-      'image' => 'Auswahlaufgabe',
-      'title' => get_string('scMcExercise', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"scMcExercise","state":{"isSingleChoice":false,"answers":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"isCorrect":false,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"isCorrect":false,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
-    ),
-    'inputExercise' => array(
-      'image' => 'Eingabefeld',
-      'title' => get_string('inputExercise', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"inputExercise","state":{"type":"input-number-exact-match-challenge","unit":"","answers":[{"value":"","isCorrect":true,"feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
-    ),
-    // 'h5p' => array(
-    //   'image' => 'H5P',
-    //   'title' => get_string('h5p', 'mod_serlo'),
-    //   'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"h5p","state":""}}}]}',
-    // ),
-    'blanksExercise' => array(
-      'image' => 'Fill-the-gap',
-      'title' => get_string('blanksExercise', 'mod_serlo'),
-      'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{"plugin":"blanksExercise","state":{"text":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
-    ),
-  ];
+    return [
+        'empty' => [
+            'image' => 'serlo-logo-feather',
+            'title' => get_string('empty', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
+        ],
+        'text' => [
+            'image' => 'Text',
+            'title' => get_string('text', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
+        ],
+        'spoiler' => [
+            'image' => 'Spoiler',
+            'title' => get_string('spoiler', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"spoiler","state":{"richTitle":{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]},"content":{"plugin":"rows","state":[{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]}]}}}]}',
+        ],
+        'box' => [
+            'image' => 'Box',
+            'title' => get_string('box', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"box","state":{"type":"example","title":{"plugin":"text",
+            "state":[{"type":"p","children":[{"text":""}]}]},"anchorId":"","content":{"plugin":"rows","state":[
+            {"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}}}]}',
+        ],
+        'serloTable' => [
+            'image' => 'Table',
+            'title' => get_string('serloTable', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"serloTable","state":{"rows":[{"columns":[
+            {"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{
+            "content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},
+            {"columns":[{"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},
+            {"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]},{"columns":[{"content":{
+            "plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]}}]},{"columns":[
+            {"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]}}]}],"tableType":"OnlyColumnHeader"}}]}',
+        ],
+        'equations' => [
+            'image' => 'Equation',
+            'title' => get_string('equations', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"equations","state":{"steps":[
+            {"left":"","sign":"equals","right":"","transform":"","explanation":{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]}},{"left":"","sign":"equals","right":"","transform":"",
+            "explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}],
+            "firstExplanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},
+            "transformationTarget":"equation"}}]}',
+        ],
+        'highlight' => [
+            'image' => 'Code',
+            'title' => get_string('highlight', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"highlight","state":{
+            "code":"","language":"text","showLineNumbers":false}}]}',
+        ],
+        'scMcExercise' => [
+            'image' => 'Auswahlaufgabe',
+            'title' => get_string('scMcExercise', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{
+            "content":{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p",
+            "children":[{"text":""}]}]}]},"interactive":{"plugin":"scMcExercise",
+            "state":{"isSingleChoice":false,"answers":[{"content":{"plugin":"text",
+            "state":[{"type":"p","children":[{"text":""}]}]},"isCorrect":false,
+            "feedback":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{
+            "content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},
+            "isCorrect":false,"feedback":{"plugin":"text",
+            "state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
+        ],
+        'inputExercise' => [
+            'image' => 'Eingabefeld',
+            'title' => get_string('inputExercise', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise",
+            "state":{"content":{"plugin":"rows","state":[{"plugin":"text",
+            "state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":{
+            "plugin":"inputExercise","state":{"type":"input-number-exact-match-challenge",
+            "unit":"","answers":[{"value":"","isCorrect":true,"feedback":{
+            "plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
+        ],
+        'blanksExercise' => [
+            'image' => 'Fill-the-gap',
+            'title' => get_string('blanksExercise', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{
+            "content":{"plugin":"rows","state":[{"plugin":"text","state":[{
+            "type":"p","children":[{"text":""}]}]}]},"interactive":{
+            "plugin":"blanksExercise","state":{"text":{"plugin":"text",
+            "state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
+        ],
+    ];
 }

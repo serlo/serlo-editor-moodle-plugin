@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -17,15 +16,19 @@
 
 /**
  * A scheduled task for serlo, which is called by Moodle cron script.
- * 
- * @package    mod_serlo
- * @author    Faisal Kaleem <faisal@wizcoders.com>
+ *
+ * @package   mod_serlo
+ * @author    Faisal Kaleem <serlo@adornis.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Serlo (https://adornis.de)
  */
+
 namespace mod_serlo\task;
 
+/**
+ * Summary of cron_task
+ */
 class cron_task extends \core\task\scheduled_task {
-
     /**
      * Get a descriptive name for this task (shown to admins).
      *
@@ -36,7 +39,8 @@ class cron_task extends \core\task\scheduled_task {
     }
 
     /**
-     * Run forum cron.
+     * Summary of execute
+     * @return void
      */
     public function execute() {
         global $CFG;

@@ -18,47 +18,54 @@
  * Strings for component 'serlo', language 'en', branch 'MOODLE'
  *
  * @package   mod_serlo
- * @author    Faisal Kaleem <faisal@wizcoders.com>
+ * @author    Faisal Kaleem <serlo@adornis.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Serlo (https://adornis.de)
  */
 
-$string['pluginname'] = 'Serlo';
-$string['pluginadministration'] = 'Serlo administration';
+$string['articleIntroduction'] = 'Explanation with multimadia-content';
+
+$string['blanksExercise'] = 'Blanks excercise';
+$string['box'] = 'Box';
+
+$string['crontask'] = 'Serlo schedule task';
+$string['empty'] = 'Editor';
+$string['equations'] = 'Equations';
+
+$string['firefox_warning'] = 'There are some problems with Firefox at the moment. ' .
+    'Please use a Chromium based browser like Chrome, Brave or Opera for a better experience.';
+
+$string['geogebra'] = 'GeoGebra Applet';
+
+$string['h5p'] = 'H5P excercise';
+$string['highlight'] = 'Code';
+
+$string['image'] = 'Image';
+$string['initialstate'] = 'Initial Content';
+$string['injection'] = 'serlo.org Content';
+$string['inputExercise'] = 'Input excercise';
+$string['intro'] = 'Introduction';
+$string['invalidserloid'] = 'Invalid serlo ID';
+
 $string['modulename'] = 'Serlo';
 $string['modulename_help'] = 'The serlo activity module enables participants to ...';
 $string['modulename_link'] = 'mod/serlo/view.php';
 $string['modulenameplural'] = 'Serlos';
-$string['serlosaved'] = 'Serlo State saved!';
-$string['serlosaveerror'] = 'Error during save of Serlo state: ';
 
+$string['pluginadministration'] = 'Serlo administration';
+$string['pluginname'] = 'Serlo';
+
+$string['scMcExercise'] = 'Choice excercise';
+$string['serloTable'] = 'Table';
+$string['serlosaved'] = 'Serlo State saved!';
+
+$string['serlosaveerror'] = 'Error during save of Serlo state: ';
+$string['settings_editor_secret_description'] = 'Editor secret!';
+$string['settings_editor_secret_label'] = 'Editor secret';
 $string['settings_placeholder'] = 'Serlo Settings Placeholder';
 
-$string['intro'] = 'Introduction';
-
-$string['crontask'] = 'Serlo schedule task';
-
-$string['initialstate'] = 'Initial Content';
-
-$string['firefox_warning'] = 'There are some problems with Firefox at the moment. Please use a Chromium based browser like Chrome, Brave or Opera for a better experience.';
-
-$string['empty'] = 'Editor';
-$string['articleIntroduction'] = 'Explanation with multimadia-content';
-$string['text'] = 'Text';
-$string['image'] = 'Image';
 $string['spoiler'] = 'Spolier';
-$string['box'] = 'Box';
-$string['serloTable'] = 'Table';
-$string['injection'] = 'serlo.org Content';
-$string['equations'] = 'Equations';
-$string['geogebra'] = 'GeoGebra Applet';
-$string['highlight'] = 'Code';
+
+$string['text'] = 'Text';
+
 $string['video'] = 'Video';
-$string['scMcExercise'] = 'Choice excercise';
-$string['inputExercise'] = 'Input excercise';
-$string['h5p'] = 'H5P excercise';
-$string['blanksExercise'] = 'Blanks excercise';
-
-$string['invalidserloid'] = 'Invalid serlo ID';
-
-$string['settings_editor_secret_label'] = 'Editor secret';
-$string['settings_editor_secret_description'] = 'Editor secret!';

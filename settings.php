@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -19,9 +18,11 @@
  * Plugin administration pages are defined here.
  *
  * @package   mod_serlo
- * @category  admin
+ * @author    Faisal Kaleem <serlo@adornis.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2024 Serlo (https://adornis.de)
  */
+
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
@@ -37,13 +38,3 @@ if ($ADMIN->fulltree) {
         )
     );
 }
-
-// $ADMIN->add('modsettings', new admin_category('modsettingsserlocat', 
-//             get_string('pluginname', 'mod_serlo'), $module->is_enabled() === false));
-
-// $ADMIN->add('modsettingsserlocat', $settings_modserlo);
-
-//$external_page = new admin_externalpage('modserloexternal', 'External page',
-//        new moodle_url('/mod/serlo/external.php'),
-//        'moodle/site:config');
-//$ADMIN->add('modsettingsserlocat', $external_page);

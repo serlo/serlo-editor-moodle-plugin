@@ -28,13 +28,11 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_heading('modserloplaceholder', get_string('settings_placeholder', 'mod_serlo'), ''));
     $settings->add(
-        new admin_setting_configtext(
+        new admin_setting_configpasswordunmask(
             'serlo/editor_secret',
             get_string('settings_editor_secret_label', 'mod_serlo'),
             get_string('settings_editor_secret_description', 'mod_serlo'),
-            '',
-            PARAM_TEXT,
-            50,
+            ''
         )
     );
 }

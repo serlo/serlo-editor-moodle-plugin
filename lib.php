@@ -139,6 +139,14 @@ function serlo_get_course_content_items(
  */
 function serlo_get_content_types() {
     return [
+        'articleIntroduction' => [
+            'image' => 'Multimedia',
+            'title' => get_string('articleIntroduction', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"articleIntroduction","state":
+            {"explanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},
+            "multimedia":{"plugin":"image","state":{"src":"","caption":{"plugin":"text","state":[
+            {"type":"p","children":[{"text":""}]}]}}},"illustrating":true,"width":50}}]}',
+        ],
         'empty' => [
             'image' => 'serlo-logo-feather',
             'title' => get_string('empty', 'mod_serlo'),
@@ -148,6 +156,12 @@ function serlo_get_content_types() {
             'image' => 'Text',
             'title' => get_string('text', 'mod_serlo'),
             'initalContent' => '{"plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]}',
+        ],
+        'image' => [
+            'image' => 'Image',
+            'title' => get_string('image', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"image","state":{
+            "src":"","caption":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}}]}',
         ],
         'spoiler' => [
             'image' => 'Spoiler',
@@ -176,6 +190,11 @@ function serlo_get_content_types() {
             {"content":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}},{"content":{"plugin":"text","state":[
             {"type":"p","children":[{"text":""}]}]}}]}],"tableType":"OnlyColumnHeader"}}]}',
         ],
+        'injection' => [
+            'image' => 'injection',
+            'title' => get_string('injection', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"injection","state":""}]}',
+        ],
         'equations' => [
             'image' => 'Equation',
             'title' => get_string('equations', 'mod_serlo'),
@@ -186,11 +205,21 @@ function serlo_get_content_types() {
             "firstExplanation":{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]},
             "transformationTarget":"equation"}}]}',
         ],
+        'geogebra' => [
+            'image' => 'GeoGebra',
+            'title' => get_string('geogebra', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"geogebra","state":""}]}',
+        ],
         'highlight' => [
             'image' => 'Code',
             'title' => get_string('highlight', 'mod_serlo'),
             'initalContent' => '{"plugin":"rows","state":[{"plugin":"highlight","state":{
             "code":"","language":"text","showLineNumbers":false}}]}',
+        ],
+        'video' => [
+            'image' => 'Video',
+            'title' => get_string('video', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"video","state":{"src":"","alt":""}}]}',
         ],
         'scMcExercise' => [
             'image' => 'Auswahlaufgabe',
@@ -214,6 +243,13 @@ function serlo_get_content_types() {
             "plugin":"inputExercise","state":{"type":"input-number-exact-match-challenge",
             "unit":"","answers":[{"value":"","isCorrect":true,"feedback":{
             "plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}}]}}}}]}',
+        ],
+        'h5p' => [
+            'image' => 'H5P',
+            'title' => get_string('h5p', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{
+            "plugin":"rows","state":[{"plugin":"text","state":[{"type":"p","children":[
+            {"text":""}]}]}]},"interactive":{"plugin":"h5p","state":""}}}]}',
         ],
         'blanksExercise' => [
             'image' => 'Fill-the-gap',
